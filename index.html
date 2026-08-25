@@ -3,653 +3,893 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BON! — French-Inspired Café & Bakery in Tashkent</title>
-  <meta name="description" content="BON! is a French-inspired café, bakery and confectionery in Tashkent, Uzbekistan. Freshly baked pastries, artisan coffee, beautiful desserts and slow breakfast — every day." />
-  <meta property="og:title" content="BON! — French-Inspired Café & Bakery" />
-  <meta property="og:description" content="A little taste of France in Tashkent. Freshly baked croissants, artisan coffee and beautiful desserts." />
+  <title>BON! — Boulangerie & Café Parisien à Tachkent</title>
+  <meta name="description" content="BON! is Tashkent's iconic French bakery and café since 2008. Handcrafted viennoiserie, galettes de sarrasin, artisan coffee, and seasonal pâtisserie across Uzbekistan." />
+  <meta property="og:title" content="BON! — Boulangerie & Café Parisien à Tachkent" />
+  <meta property="og:description" content="Un petit coin de France à Tachkent. Pure butter croissants, slow mornings, and genuine French café culture." />
+  <meta property="og:image" content="bon_coffee_croissant.png" />
   <meta property="og:type" content="website" />
+
+  <!-- Fonts: Fraunces (Editorial Display) + Plus Jakarta Sans (Modern Clean) + Cormorant Garamond (Literary) + Caveat (Handwritten Notes) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="bon.css" />
 </head>
-<body>
+<body class="bon-editorial-body">
 
-  <!-- NAVBAR -->
-  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo" aria-label="BON! Home">BON!</a>
-      <ul class="nav-links" role="list">
-        <li><a href="#menu" class="nav-link">Menu</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#locations" class="nav-link">Locations</a></li>
-        <li><a href="#gallery" class="nav-link">Gallery</a></li>
-      </ul>
-      <a href="#locations" class="nav-cta" id="nav-find-cafe">Find a Café</a>
-      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+  <!-- Top Announcement / Live Dispatch Ribbon -->
+  <aside class="dispatch-ticker" id="dispatch-ticker" aria-label="Bakery Dispatch">
+    <div class="ticker-content">
+      <div class="ticker-item"><span class="ticker-dot live-pulse"></span> <strong id="tashkent-time-display">Tashkent 08:30</strong> &nbsp;·&nbsp; <span id="bakery-status-banner">Le Fournil: Fresh Viennoiserie Batch Out of the Oven</span></div>
+      <div class="ticker-divider">/</div>
+      <div class="ticker-item">Flagship Café: <strong>Shota Rustaveli, 63</strong> & <strong>Fidokor / Chekhov, 40</strong></div>
+      <div class="ticker-divider">/</div>
+      <div class="ticker-item">Artisanal 100% Pure Butter Pastries Baked Daily</div>
+      <div class="ticker-divider">/</div>
+      <div class="ticker-item">Winter Collection: <em>Pistachio Matcha Crumble & Caramel Popcorn Raff</em></div>
     </div>
-  </nav>
+  </aside>
 
-  <!-- Mobile fullscreen nav -->
-  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
-    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">✕</button>
-    <ul class="mobile-nav-links" role="list">
-      <li><a href="#menu" class="mobile-nav-link" data-delay="0">Menu</a></li>
-      <li><a href="#about" class="mobile-nav-link" data-delay="1">About</a></li>
-      <li><a href="#locations" class="mobile-nav-link" data-delay="2">Locations</a></li>
-      <li><a href="#gallery" class="mobile-nav-link" data-delay="3">Gallery</a></li>
-      <li><a href="#locations" class="mobile-nav-link mobile-nav-cta" data-delay="4">Find a Café →</a></li>
-    </ul>
-    <div class="mobile-nav-footer">
-      <span>Instagram</span>
-      <span>Telegram</span>
+  <!-- Editorial Masthead Navigation -->
+  <header class="masthead" id="masthead" role="banner">
+    <div class="masthead-inner">
+      
+      <!-- Left: Brand seal & Time -->
+      <div class="masthead-left">
+        <a href="#hero" class="brand-signature" aria-label="BON! Home">
+          <span class="brand-text">Bon!</span>
+          <span class="brand-sub">Tachkent · 2008</span>
+        </a>
+      </div>
+
+      <!-- Center: Editorial Chapters -->
+      <nav class="masthead-nav" id="masthead-nav" aria-label="Main navigation">
+        <ul class="nav-chapters" role="list">
+          <li><a href="#journal" class="nav-chapter"><span class="chapter-num">01</span> Le Journal</a></li>
+          <li><a href="#menu-salon" class="nav-chapter"><span class="chapter-num">02</span> La Carte</a></li>
+          <li><a href="#seasonal" class="nav-chapter"><span class="chapter-num">03</span> Créations</a></li>
+          <li><a href="#tray-builder" class="nav-chapter"><span class="chapter-num">04</span> Mon Plateau</a></li>
+          <li><a href="#locations" class="nav-chapter"><span class="chapter-num">05</span> Nos Maisons</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right: Utility actions -->
+      <div class="masthead-right">
+        <!-- Ambiance audio toggle -->
+        <button class="sound-toggle-btn" id="sound-toggle-btn" aria-label="Toggle Café Ambiance Tone" title="Listen to Bon! Café Tone">
+          <span class="sound-icon" aria-hidden="true">
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+          </span>
+          <span class="sound-label">Café Sound</span>
+        </button>
+
+        <a href="#locations" class="pill-btn nav-pill-btn">
+          <span class="pill-dot"></span>
+          <span>Find a Table</span>
+        </a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Curtain -->
+  <div class="mobile-curtain" id="mobile-curtain" aria-hidden="true">
+    <div class="curtain-header">
+      <span class="curtain-brand">Bon!</span>
+      <button class="curtain-close" id="curtain-close" aria-label="Close Navigation">✕</button>
+    </div>
+    <div class="curtain-body">
+      <ul class="curtain-links">
+        <li><a href="#journal" class="curtain-link"><span class="c-num">01</span> <em>Le Journal</em> — Morning Dispatch</a></li>
+        <li><a href="#menu-salon" class="curtain-link"><span class="c-num">02</span> <em>La Carte</em> — Interactive Menu</a></li>
+        <li><a href="#seasonal" class="curtain-link"><span class="c-num">03</span> <em>Saison</em> — Winter Bar Drinks</a></li>
+        <li><a href="#tray-builder" class="curtain-link"><span class="c-num">04</span> <em>Mon Plateau</em> — Compose Your Tray</a></li>
+        <li><a href="#locations" class="curtain-link"><span class="c-num">05</span> <em>Nos Maisons</em> — Tashkent Addresses</a></li>
+      </ul>
+      <div class="curtain-footer">
+        <p class="curtain-hours">Open Daily: 08:00 — 23:00</p>
+        <p class="curtain-social">
+          <a href="https://instagram.com/boncafe.uz" target="_blank" rel="noopener">Instagram @boncafe.uz</a>
+          <span>·</span>
+          <a href="https://t.me/boncafeuz" target="_blank" rel="noopener">Telegram</a>
+        </p>
+      </div>
     </div>
   </div>
 
-  <main>
+  <main id="main-content">
 
-    <!-- HERO -->
-    <section class="hero" id="hero" aria-label="Hero">
-      <div class="hero-bg" id="hero-bg">
-        <img src="hero_cafe.jpg" alt="Golden croissants and a cappuccino on a marble café table in warm morning light" class="hero-img" id="hero-img" fetchpriority="high" />
-        <div class="hero-overlay"></div>
-      </div>
-      <div class="hero-content">
-        <p class="hero-eyebrow" id="hero-eyebrow">
-          <span class="eyebrow-dot"></span>
-          BAKED FRESH DAILY · TASHKENT
-        </p>
-        <h1 class="hero-headline" id="hero-headline">
-          <span class="hero-line" data-line="0">Bonjour,</span>
-          <span class="hero-line" data-line="1">Tashkent.</span>
-        </h1>
-        <p class="hero-subline" id="hero-subline">A little taste of France.</p>
-        <p class="hero-body" id="hero-body">
-          Freshly baked pastries, beautiful desserts and carefully crafted coffee —<br class="br-desktop" />
-          made for slow mornings and good conversations.
-        </p>
-        <div class="hero-buttons" id="hero-buttons">
-          <a href="#menu" class="btn btn-primary" id="btn-explore-menu">Explore the Menu</a>
-          <a href="#locations" class="btn btn-outline" id="btn-find-location">Find a Location</a>
+    <!-- =========================================================
+         01. HERO — EDITORIAL COVER COMPOSITION
+         ========================================================= -->
+    <section class="hero-editorial" id="hero" aria-label="Bon! Flagship Editorial Cover">
+      <div class="hero-editorial-container">
+        
+        <!-- Top Editorial Banner line -->
+        <div class="hero-top-meta">
+          <div class="meta-tag">
+            <span class="badge-pill">N° 08 · TASHKENT</span>
+            <span class="meta-text">Boulangerie · Pâtisserie · Salon de Café</span>
+          </div>
+          <div class="meta-stamp">
+            <span class="stamp-circle">
+              <svg viewBox="0 0 100 100" class="stamp-svg" aria-hidden="true">
+                <path id="stamp-path" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
+                <text font-size="11.5" letter-spacing="2.2" fill="currentColor">
+                  <textPath href="#stamp-path">· BON! TACHKENT · DEPUIS 2008 </textPath>
+                </text>
+              </svg>
+              <span class="stamp-inner-text">★</span>
+            </span>
+          </div>
         </div>
-      </div>
-      <div class="hero-scroll-indicator" aria-hidden="true">
-        <div class="scroll-line"></div>
+
+        <!-- Asymmetrical Hero Grid -->
+        <div class="hero-editorial-grid">
+          
+          <!-- Column 1: Massive Brand Title + Provocative Editorial Manifesto -->
+          <div class="hero-col-title">
+            <div class="hero-eyebrow-script">Un petit coin de France à Tachkent</div>
+            <h1 class="hero-big-title">
+              <span class="title-line-1">Le goût</span>
+              <span class="title-line-2"><em>de la vie</em></span>
+              <span class="title-line-3">commence ici.</span>
+            </h1>
+
+            <div class="hero-manifesto-card">
+              <p class="manifesto-text">
+                Not a fast food counter. Not a corporate chain. <strong>Bon!</strong> is the ritual of the Parisian morning brought to the tree-lined avenues of Tashkent.
+              </p>
+              <div class="manifesto-footnote">
+                <span class="flour-icon">🌾</span>
+                <span>Crafted with French butter, slow fermentation, and unhurried hospitality.</span>
+              </div>
+            </div>
+
+            <div class="hero-actions-row">
+              <a href="#menu-salon" class="btn-editorial-dark">
+                <span>Feuilleter La Carte</span>
+                <span class="btn-arrow">→</span>
+              </a>
+              <a href="#tray-builder" class="btn-editorial-ghost">
+                <span>Compose Your Tray</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: The Real Bon! Hero Visual Composition -->
+          <div class="hero-col-visual">
+            <div class="hero-image-stage">
+              
+              <!-- Primary Real Image: Bon! branded cup & golden croissant on bistro table -->
+              <div class="hero-main-photo-wrap">
+                <img 
+                  src="bon_coffee_croissant.png" 
+                  alt="Authentic Bon! branded porcelain cup with cappuccino latte art and hot golden croissant on wooden café bistro table with checkered tiles" 
+                  class="hero-main-photo" 
+                  fetchpriority="high"
+                />
+                <div class="photo-caption-tag">
+                  <span class="caption-dot"></span>
+                  <span>Signature Cappuccino & Croissant au Beurre Pure</span>
+                </div>
+              </div>
+
+              <!-- Floating Editorial Detail Card -->
+              <div class="hero-floating-card hero-card-oven">
+                <div class="card-icon">🔥</div>
+                <div class="card-info">
+                  <span class="card-title">Fournil En Direct</span>
+                  <span class="card-desc" id="hero-oven-note">Next Croissant Batch: <strong>15 mins</strong></span>
+                </div>
+              </div>
+
+              <!-- Floating Porcelain Seal -->
+              <div class="hero-floating-card hero-card-porcelain">
+                <div class="porcelain-rim">
+                  <span class="p-brand">Bon!</span>
+                  <span class="p-sub">Porcelaine Blanche</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Bottom Editorial Numbers -->
+        <div class="hero-bottom-bar">
+          <div class="hero-stat-block">
+            <span class="stat-big">72<small>h</small></span>
+            <span class="stat-caption">Slow cold fermentation for our artisan baguettes</span>
+          </div>
+          <div class="hero-stat-block">
+            <span class="stat-big">100<small>%</small></span>
+            <span class="stat-caption">Pure French butter laminated by hand every dawn</span>
+          </div>
+          <div class="hero-stat-block">
+            <span class="stat-big">16<small>yrs</small></span>
+            <span class="stat-caption">Setting the standard for café culture in Uzbekistan</span>
+          </div>
+          <div class="hero-stat-block hero-stat-time">
+            <div class="stat-clock-label">HEURE DE TACHKENT</div>
+            <div class="stat-live-time" id="hero-clock-time">--:--:--</div>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- INTRO -->
-    <section class="intro section-reveal" id="intro" aria-label="Brand introduction">
-      <div class="intro-inner">
-        <div class="intro-text-side reveal-left">
-          <p class="section-label">BON! PARISIAN SPIRIT</p>
-          <h2 class="intro-headline">
-            Made with care.<br />
-            <em>Enjoyed slowly.</em>
-          </h2>
-          <p class="intro-body">
-            Born from a love of French café culture, BON! brings the art of the boulangerie
-            to the heart of Tashkent. Every morning, our bakers craft croissants with the
-            patience they deserve — layers of butter folded and rested until they become
-            something close to perfect.
+
+    <!-- =========================================================
+         02. SECTION I — LE JOURNAL DU MATIN (RHYTHMIC DISPATCH)
+         ========================================================= -->
+    <section class="section-journal" id="journal" aria-label="The Morning Dispatch">
+      <div class="journal-container">
+        
+        <div class="journal-header">
+          <div class="header-left">
+            <span class="journal-label">VOLUME 16 · ÉDITION TACHKENT</span>
+            <h2 class="journal-title">La Table du Midi &amp; du Matin</h2>
+          </div>
+          <p class="journal-lede">
+            From the crisp crack of a morning galette to chilled summer gazpacho on limestone travertine, here is how Tashkent gathers around Bon!.
           </p>
-          <p class="intro-body">
-            Our cafés are designed to slow you down. Pull up a chair, order something warm,
-            and let the day begin on your terms. Whether it's your first espresso of the morning
-            or an afternoon éclair, BON! is your place to just be.
+        </div>
+
+        <!-- Big Editorial Table Spread Layout -->
+        <div class="table-spread-grid">
+          
+          <!-- Left: Big authentic photo with interactive hot-spots -->
+          <div class="spread-photo-column">
+            <div class="spread-photo-frame" id="spread-interactive-frame">
+              <img 
+                src="bon_table_spread.png" 
+                alt="Table spread at Bon! with Galette de sarrasin, chilled gazpacho with almonds, fresh green salad on branded porcelain, and layered espresso tonic" 
+                class="spread-main-img" 
+                loading="lazy"
+              />
+
+              <!-- Interactive Spotlight Pin 1: Galette -->
+              <button class="dish-pin pin-galette" data-dish="galette" aria-label="Spotlight: Galette de Sarrasin" style="top: 72%; left: 62%;">
+                <span class="pin-pulse"></span>
+                <span class="pin-inner">1</span>
+                <span class="pin-tooltip">Galette de Sarrasin Complète</span>
+              </button>
+
+              <!-- Interactive Spotlight Pin 2: Gazpacho -->
+              <button class="dish-pin pin-gazpacho" data-dish="gazpacho" aria-label="Spotlight: Soupe Froide Gazpacho" style="top: 48%; left: 68%;">
+                <span class="pin-pulse"></span>
+                <span class="pin-inner">2</span>
+                <span class="pin-tooltip">Gazpacho Andalou aux Amandes</span>
+              </button>
+
+              <!-- Interactive Spotlight Pin 3: Salade Fraîche -->
+              <button class="dish-pin pin-salad" data-dish="salad" aria-label="Spotlight: Salade Bon!" style="top: 34%; left: 28%;">
+                <span class="pin-pulse"></span>
+                <span class="pin-inner">3</span>
+                <span class="pin-tooltip">Salade Gourmande au Parmesan</span>
+              </button>
+
+              <!-- Interactive Spotlight Pin 4: Cold Brew Tonic -->
+              <button class="dish-pin pin-coffee" data-dish="coffee" aria-label="Spotlight: Espresso Tonic" style="top: 60%; left: 22%;">
+                <span class="pin-pulse"></span>
+                <span class="pin-inner">4</span>
+                <span class="pin-tooltip">Café Tonic & Cold Brew Layered</span>
+              </button>
+            </div>
+            
+            <p class="photo-subnote">
+              <span class="subnote-icon">✦</span> Tap any number on the table to inspect the dish and recipe notes.
+            </p>
+          </div>
+
+          <!-- Right: Editorial Narrative & Dish Inspector Slate -->
+          <div class="spread-info-column">
+            
+            <div class="dish-inspector-card" id="dish-inspector-card">
+              <div class="inspector-badge" id="inspector-badge">DISH FOCUS · 01</div>
+              <h3 class="inspector-title" id="inspector-title">Galette de Sarrasin Complète</h3>
+              <p class="inspector-french-name" id="inspector-french">Crêpe artisanale de blé noir · Jambon de dinde, emmental fondu, œuf miroir & roquette</p>
+              
+              <p class="inspector-story" id="inspector-story">
+                Authentic Brittany-style buckwheat galette folded into a warm savoury parcel. Crispy golden edges, served with farm fresh greens and olive oil on genuine Bon! porcelain.
+              </p>
+
+              <div class="inspector-meta-row">
+                <div class="meta-item">
+                  <span class="m-label">Service</span>
+                  <span class="m-val" id="inspector-service">All Day Brunch</span>
+                </div>
+                <div class="meta-item">
+                  <span class="m-label">Origins</span>
+                  <span class="m-val">Brittany Tradition</span>
+                </div>
+                <div class="meta-item">
+                  <span class="m-label">Tarif</span>
+                  <span class="m-val price-val" id="inspector-price">58 000 UZS</span>
+                </div>
+              </div>
+
+              <div class="inspector-pairing">
+                <span class="pairing-label">Recommandation du Sommelier Café:</span>
+                <p class="pairing-text" id="inspector-pairing">Pairs wonderfully with our double-shot Iced Espresso Tonic with citrus zest.</p>
+              </div>
+
+              <button class="btn-add-tray" id="btn-inspector-add" data-item="Galette de Sarrasin" data-price="58000" data-cat="plat">
+                <span>+ Add to My Bon! Tray</span>
+              </button>
+            </div>
+
+            <!-- Bakery Clock Schedule -->
+            <div class="oven-dispatch-schedule">
+              <div class="schedule-head">
+                <span class="s-title">Les Heures du Fournil</span>
+                <span class="s-city">Tashkent Daily</span>
+              </div>
+              <ul class="schedule-timeline">
+                <li class="timeline-slot active-slot">
+                  <span class="slot-time">07:30</span>
+                  <div class="slot-content">
+                    <strong>Première Fournée:</strong> Croissants, pains au chocolat & brioches chaudes.
+                  </div>
+                  <span class="slot-badge">Fresh</span>
+                </li>
+                <li class="timeline-slot">
+                  <span class="slot-time">11:30</span>
+                  <div class="slot-content">
+                    <strong>Déjeuner & Tartines:</strong> Galettes de sarrasin, quiches lorraines & soupes de saison.
+                  </div>
+                </li>
+                <li class="timeline-slot">
+                  <span class="slot-time">15:30</span>
+                  <div class="slot-content">
+                    <strong>L'Heure du Goûter:</strong> Mille-feuilles vanille Bourbon, éclairs au chocolat & cafés signature.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         03. SECTION II — LA CARTE DU SALON (INTERACTIVE MENU EXPERIENCE)
+         ========================================================= -->
+    <section class="section-menu-salon" id="menu-salon" aria-label="Interactive Café Menu">
+      <div class="menu-salon-container">
+        
+        <!-- Section Header -->
+        <div class="menu-editorial-header">
+          <div class="header-tagline">LA CARTE DU CAFÉ · TOUT EST FAIT MAISON</div>
+          <h2 class="menu-main-heading">Crafted with patience.<br /><em>Served with grace.</em></h2>
+          <p class="menu-lead-description">
+            Explore our curated culinary repertoire across morning viennoiseries, authentic buckwheat galettes, savory tartines, artisan espresso roasts, and French pastry craft.
           </p>
-          <a href="#about" class="text-link reveal-link">Discover our story <span>→</span></a>
+
+          <!-- Interactive Category Tabs -->
+          <div class="menu-tab-nav" role="tablist" aria-label="Menu Sections">
+            <button class="carte-tab active" data-category="viennoiserie" role="tab" aria-selected="true" id="tab-viennoiserie">
+              <span class="tab-french">Viennoiserie & Pains</span>
+              <span class="tab-count">6 items</span>
+            </button>
+            <button class="carte-tab" data-category="dejeuner" role="tab" aria-selected="false" id="tab-dejeuner">
+              <span class="tab-french">Galettes & Déjeuners</span>
+              <span class="tab-count">6 items</span>
+            </button>
+            <button class="carte-tab" data-category="patisserie" role="tab" aria-selected="false" id="tab-patisserie">
+              <span class="tab-french">Pâtisserie Fine</span>
+              <span class="tab-count">6 items</span>
+            </button>
+            <button class="carte-tab" data-category="boissons" role="tab" aria-selected="false" id="tab-boissons">
+              <span class="tab-french">Atelier Café & Thés</span>
+              <span class="tab-count">6 items</span>
+            </button>
+          </div>
         </div>
-        <div class="intro-image-side reveal-right">
-          <div class="intro-image-frame">
-            <img src="intro_editorial.jpg" alt="Baker dusting powdered sugar on a freshly baked croissant" class="intro-img" loading="lazy" />
+
+        <!-- Dynamic Menu Grid Container -->
+        <div class="menu-items-editorial" id="menu-items-grid">
+          <!-- Populated by bon.js with rich cards -->
+        </div>
+
+        <!-- Menu Footnote & Custom Cake Ordering Banner -->
+        <div class="menu-bottom-feature">
+          <div class="cake-order-banner">
+            <div class="cake-order-text">
+              <span class="cake-label">COMMANDES SPÉCIALES &amp; GÂTEAUX</span>
+              <h3>Celebrate with a Grand Bon! Pâtisserie</h3>
+              <p>Custom birthday cakes, whole Opera tortes, fruit tarts, and catering boxes prepared with 24 hours notice for your special occasions in Tashkent.</p>
+            </div>
+            <div class="cake-order-action">
+              <a href="https://t.me/boncafeuz" target="_blank" rel="noopener" class="btn-gold-order">
+                <span>Order via Telegram Bot</span>
+                <span>↗</span>
+              </a>
+            </div>
           </div>
-          <div class="intro-image-badge" aria-hidden="true">
-            <span class="badge-text">Est.</span>
-            <span class="badge-year">Tashkent</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         04. SECTION III — LES BOISSONS DE SAISON (EMERALD SILK SPOTLIGHT)
+         ========================================================= -->
+    <section class="section-seasonal" id="seasonal" aria-label="Winter Seasonal Drink Collection">
+      <div class="seasonal-silk-backdrop">
+        <div class="seasonal-container">
+          
+          <div class="seasonal-header">
+            <div class="seasonal-badge">COLLECTION D'HIVER · ÉDITION LIMITÉE</div>
+            <h2 class="seasonal-headline">L'Atelier des Boissons de Saison</h2>
+            <p class="seasonal-subtext">
+              Served exclusively in textured relief crystal glasses on rich emerald silk. Warm spices, delicate matcha crumble, toasted coconut, and velvety caramel popcorn foam.
+            </p>
           </div>
+
+          <div class="seasonal-presentation-grid">
+            
+            <!-- Real photo: 4 drinks on emerald green silk -->
+            <div class="seasonal-photo-side">
+              <div class="seasonal-frame">
+                <img 
+                  src="bon_seasonal_drinks.png" 
+                  alt="Four bespoke seasonal drinks from Bon! served in crystal textured glasses on emerald green fabric with popcorn, toasted crumble, cinnamon, and coconut" 
+                  class="seasonal-img" 
+                  loading="lazy"
+                />
+                <div class="seasonal-silk-label">
+                  <span>Photo: Atelier Boissons Bon! Tashkent</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Drink items breakdown list -->
+            <div class="seasonal-list-side">
+              
+              <div class="seasonal-item-card">
+                <div class="season-item-header">
+                  <span class="season-number">01</span>
+                  <div class="season-titles">
+                    <h4>Pistachio Matcha Crumble</h4>
+                    <p class="season-ingredients">Ceremonial green matcha, oat milk, crushed pistachio shortbread rim</p>
+                  </div>
+                  <span class="season-price">44 000 UZS</span>
+                </div>
+                <div class="season-actions">
+                  <span class="season-badge-tag">Warm / Iced</span>
+                  <button class="btn-mini-add" data-item="Pistachio Matcha Crumble" data-price="44000" data-cat="boisson">+ Add to Tray</button>
+                </div>
+              </div>
+
+              <div class="seasonal-item-card">
+                <div class="season-item-header">
+                  <span class="season-number">02</span>
+                  <div class="season-titles">
+                    <h4>Caramel Popcorn Raff</h4>
+                    <p class="season-ingredients">Double espresso, light cream, salted caramel, crowned with crisp caramel popcorn</p>
+                  </div>
+                  <span class="season-price">42 000 UZS</span>
+                </div>
+                <div class="season-actions">
+                  <span class="season-badge-tag">House Favorite</span>
+                  <button class="btn-mini-add" data-item="Caramel Popcorn Raff" data-price="42000" data-cat="boisson">+ Add to Tray</button>
+                </div>
+              </div>
+
+              <div class="seasonal-item-card">
+                <div class="season-item-header">
+                  <span class="season-number">03</span>
+                  <div class="season-titles">
+                    <h4>Chocolat Chaud &amp; Flocons de Coco</h4>
+                    <p class="season-ingredients">Rich melted dark chocolate, steamed whole milk, snow-dusted coconut flakes</p>
+                  </div>
+                  <span class="season-price">38 000 UZS</span>
+                </div>
+                <div class="season-actions">
+                  <span class="season-badge-tag">Comfort Classic</span>
+                  <button class="btn-mini-add" data-item="Chocolat Chaud Coco" data-price="38000" data-cat="boisson">+ Add to Tray</button>
+                </div>
+              </div>
+
+              <div class="seasonal-item-card">
+                <div class="season-item-header">
+                  <span class="season-number">04</span>
+                  <div class="season-titles">
+                    <h4>Pain d'Épices Spiced Latte</h4>
+                    <p class="season-ingredients">Espresso, cinnamon, star anise, nutmeg, honey foam with ginger cookie crumbs</p>
+                  </div>
+                  <span class="season-price">40 000 UZS</span>
+                </div>
+                <div class="season-actions">
+                  <span class="season-badge-tag">Winter Blend</span>
+                  <button class="btn-mini-add" data-item="Spiced Gingerbread Latte" data-price="40000" data-cat="boisson">+ Add to Tray</button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- PRODUCTS -->
-    <section class="products" id="products" aria-label="Signature products">
-      <div class="products-inner">
-        <div class="products-header reveal-up">
-          <p class="section-label">SIGNATURE</p>
-          <h2 class="products-headline">The good stuff.</h2>
-        </div>
-        <div class="products-grid">
 
-          <article class="product-item product-large reveal-clip" data-index="0" aria-label="Croissants">
-            <div class="product-img-wrap">
-              <img src="product_croissant.jpg" alt="Three golden flaky croissants on parchment paper" loading="lazy" />
-              <div class="product-overlay"></div>
-            </div>
-            <div class="product-info">
-              <p class="product-number">01</p>
-              <h3 class="product-name">Croissants</h3>
-              <p class="product-desc">Buttery, flaky and freshly baked.</p>
-            </div>
-          </article>
-
-          <article class="product-item product-tall reveal-clip" data-index="1" aria-label="Coffee">
-            <div class="product-img-wrap">
-              <img src="product_coffee.jpg" alt="Perfectly crafted latte art cappuccino on marble" loading="lazy" />
-              <div class="product-overlay"></div>
-            </div>
-            <div class="product-info">
-              <p class="product-number">02</p>
-              <h3 class="product-name">Coffee</h3>
-              <p class="product-desc">Carefully prepared espresso-based drinks.</p>
-            </div>
-          </article>
-
-          <article class="product-item product-wide reveal-clip" data-index="2" aria-label="Desserts">
-            <div class="product-img-wrap">
-              <img src="product_desserts.jpg" alt="Elegant French pastries and desserts on a white cake stand" loading="lazy" />
-              <div class="product-overlay"></div>
-            </div>
-            <div class="product-info">
-              <p class="product-number">03</p>
-              <h3 class="product-name">Desserts</h3>
-              <p class="product-desc">Beautiful cakes, pastries and sweet creations.</p>
-            </div>
-          </article>
-
-          <article class="product-item product-medium reveal-clip" data-index="3" aria-label="Breakfast">
-            <div class="product-img-wrap">
-              <img src="product_breakfast.jpg" alt="Elegant French café breakfast with avocado toast and coffee" loading="lazy" />
-              <div class="product-overlay"></div>
-            </div>
-            <div class="product-info">
-              <p class="product-number">04</p>
-              <h3 class="product-name">Breakfast</h3>
-              <p class="product-desc">A relaxed way to start the day.</p>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- MENU PREVIEW -->
-    <section class="menu" id="menu" aria-label="Menu preview">
-      <div class="menu-inner">
-        <div class="menu-header reveal-up">
-          <p class="section-label">THE MENU</p>
-          <h2 class="menu-headline">Something for every<br /><em>kind of morning.</em></h2>
-        </div>
-
-        <div class="menu-tabs" id="menu-tabs" role="tablist" aria-label="Menu categories">
-          <button class="menu-tab active" data-tab="coffee" role="tab" aria-selected="true" id="tab-coffee">Coffee</button>
-          <button class="menu-tab" data-tab="breakfast" role="tab" aria-selected="false" id="tab-breakfast">Breakfast</button>
-          <button class="menu-tab" data-tab="pastries" role="tab" aria-selected="false" id="tab-pastries">Pastries</button>
-          <button class="menu-tab" data-tab="desserts" role="tab" aria-selected="false" id="tab-desserts">Desserts</button>
-        </div>
-
-        <div class="menu-panels">
-
-          <div class="menu-panel active" data-panel="coffee" role="tabpanel" aria-labelledby="tab-coffee">
-            <div class="menu-items">
-              <div class="menu-item" data-stagger="0">
-                <div class="menu-item-left">
-                  <h4 class="menu-item-name">Espresso</h4>
-                  <p class="menu-item-desc">Single origin, expertly pulled</p>
-                </div>
-                <span class="menu-item-price">18 000 UZS</span>
-              </div>
-              <div class="menu-item" data-stagger="1">
-                <div class="menu-item-left">
-                  <h4 class="menu-item-name">Cappuccino</h4>
-                  <p class="menu-item-desc">Espresso, steamed milk, velvety foam</p>
-                </div>
-                <span class="menu-item-price">28 000 UZS</span>
-              </div>
-              <div class="menu-item" data-stagger="2">
-                <div class="menu-item-left">
-                  <h4 class="menu-item-name">Latte</h4>
-                  <p class="menu-item-desc">Smooth, creamy, perfectly balanced</p>
-                </div>
-                <span class="menu-item-price">30 000 UZS</span>
-              </div>
-              <div class="menu-item" data-stagger="3">
-                <div class="menu-item-left">
-                  <h4 class="menu-item-name">Flat White</h4>
-                  <p class="menu-item-desc">Ristretto and silky microfoam</p>
-                </div>
-                <span class="menu-item-price">32 000 UZS</span>
-              </div>
-              <div class="menu-item" data-stagger="4">
-                <div class="menu-item-left">
-                  <h4 class="menu-item-name">Americano</h4>
-                  <p class="menu-item-desc">Long black, clean and precise</p>
-                </div>
-                <span class="menu-item-price">22 000 UZS</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="menu-panel" data-panel="breakfast" role="tabpanel" aria-labelledby="tab-breakfast">
-            <div class="menu-items">
-              <div class="menu-item" data-stagger="0">
-                <div class="menu-item-left">
-                  <h4 class="menu-item-name">Breakfast Plate</h4>
-                  <p class="menu-item-desc">Eggs, sourdough toast, seasonal accompaniments</p>
-                </div>
-                <span class="menu-item-price">65 000 UZS</span>
-              </div>
-              <div class="menu-item" data-stagger="1">
-                <div class="menu-item-left">
-                  <h4 class="menu-item-name">Avocado Toast</h4>
-                  <p class="menu-item-desc">Sourdough, avocado, poached egg, microgreens</p>
-                </div>
-                <span class="menu-item-price">58 000 UZS</span>
-              </div>
-              <div class="menu-item" data-stagger="2">
-                <div class="menu-item-left">
-                  <h4 class="menu-item-name">Omelette du Matin</h4>
-                  <p class="menu-item-desc">Classic French omelette, herbs and cheese</p>
-                </div>
-                <span class="menu-item-price">52 000 UZS</span>
-              </div>
-              <div class="menu-item" data-stagger="3">
-                <div class="menu-item-left">
-                  <h4 class="menu-item-name">Granola & Yogurt</h4>
-                  <p class="menu-item-desc">House granola, fresh seasonal fruit</p>
-                </div>
-                <span class="menu-item-price">42 000 UZS</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="menu-panel" data-panel="pastries" role="tabpanel" aria-labelledby="tab-pastries">
-            <div class="menu-items">
-              <div class="menu-item" data-stagger="0">
-                <div class="menu-item-left">
-                  <h4 class="menu-item-name">Croissant</h4>
-                  <p class="menu-item-desc">Classic butter croissant, baked each morning</p>
-                </div>
-                <span class="menu-item-price">22 000 UZS</span>
-              </div>
-              <div class="menu-item" data-stagger="1">
-                <div class="menu-item-left">
-                  <h4 class="menu-item-name">Pain au Chocolat</h4>
-                  <p class="menu-item-desc">Dark chocolate wrapped in flaky pastry</p>
-                </div>
-                <span class="menu-item-price">26 000 UZS</span>
-              </div>
-              <div class="menu-item" data-stagger="2">
-                <div class="menu-item-left">
-                  <h4 class="menu-item-name">Almond Croissant</h4>
-                  <p class="menu-item-desc">Filled and topped with frangipane</p>
-                </div>
-                <span class="menu-item-price">30 000 UZS</span>
-              </div>
-              <div class="menu-item" data-stagger="3">
-                <div class="menu-item-left">
-                  <h4 class="menu-item-name">Kouign-Amann</h4>
-                  <p class="menu-item-desc">Caramelised butter cake, crispy and golden</p>
-                </div>
-                <span class="menu-item-price">28 000 UZS</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="menu-panel" data-panel="desserts" role="tabpanel" aria-labelledby="tab-desserts">
-            <div class="menu-items">
-              <div class="menu-item" data-stagger="0">
-                <div class="menu-item-left">
-                  <h4 class="menu-item-name">Cheesecake</h4>
-                  <p class="menu-item-desc">New York-style, seasonal fruit compote</p>
-                </div>
-                <span class="menu-item-price">48 000 UZS</span>
-              </div>
-              <div class="menu-item" data-stagger="1">
-                <div class="menu-item-left">
-                  <h4 class="menu-item-name">Fruit Tart</h4>
-                  <p class="menu-item-desc">Crisp pastry shell, crème pâtissière, seasonal fruit</p>
-                </div>
-                <span class="menu-item-price">45 000 UZS</span>
-              </div>
-              <div class="menu-item" data-stagger="2">
-                <div class="menu-item-left">
-                  <h4 class="menu-item-name">Éclair</h4>
-                  <p class="menu-item-desc">Choux pastry, chocolate glaze, crème filling</p>
-                </div>
-                <span class="menu-item-price">32 000 UZS</span>
-              </div>
-              <div class="menu-item" data-stagger="3">
-                <div class="menu-item-left">
-                  <h4 class="menu-item-name">Opera Cake</h4>
-                  <p class="menu-item-desc">Coffee buttercream, chocolate ganache, joconde</p>
-                </div>
-                <span class="menu-item-price">52 000 UZS</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="menu-note reveal-up">
-          <p>* Prices shown are indicative. Please confirm current pricing in-café.</p>
-        </div>
-        <div class="menu-cta reveal-up">
-          <a href="#" class="text-link-large" id="link-full-menu">View Full Menu →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- PARALLAX BREAK -->
-    <section class="parallax-break" id="visual-break" aria-label="Visual break">
-      <div class="parallax-img-wrap" id="parallax-wrap">
-        <img src="hero_cafe.jpg" alt="Fresh pastries and coffee on a café table" class="parallax-img" id="parallax-img" loading="lazy" />
-        <div class="parallax-overlay"></div>
-      </div>
-      <div class="parallax-text reveal-up">
-        <h2 class="parallax-headline">Take your time.</h2>
-        <div class="parallax-rule"></div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about" id="about" aria-label="About BON!">
-      <div class="about-inner">
-        <div class="about-image-side">
-          <div class="about-img-frame reveal-clip-dark">
-            <img src="intro_editorial.jpg" alt="Artisan baker at work in a beautiful French bakery" class="about-img" loading="lazy" />
-          </div>
-        </div>
-        <div class="about-text-side">
-          <p class="section-label section-label-light reveal-up">MORE THAN A BAKERY</p>
-          <h2 class="about-headline reveal-up">More than<br />a bakery.</h2>
-          <p class="about-body reveal-up">
-            BON! is a place that holds space for all kinds of mornings and all kinds of moments.
-            Come for your first coffee of the day. Stay for a slow breakfast. Return for an
-            afternoon dessert and a conversation that stretches past closing time.
+    <!-- =========================================================
+         05. SECTION IV — COMPOSEZ VOTRE MOMENT BON! (TRAY BUILDER)
+         ========================================================= -->
+    <section class="section-tray-builder" id="tray-builder" aria-label="Interactive Bon! Moment Tray Builder">
+      <div class="tray-container">
+        
+        <div class="tray-intro-header">
+          <span class="tray-label">EXPÉRIENCE INTERACTIVE · MON PLATEAU DU JOUR</span>
+          <h2 class="tray-headline">Compose Your Ideal Bon! Moment</h2>
+          <p class="tray-subtext">
+            Build your personalized café tray: select your morning viennoiserie, your signature drink, and an afternoon treat. Get your artisanal digital order card to show our baristas.
           </p>
-          <ul class="about-list reveal-up" aria-label="What BON! is for">
-            <li><span class="about-list-marker">—</span> Morning coffee &amp; slow breakfast</li>
-            <li><span class="about-list-marker">—</span> Meetings that need a proper setting</li>
-            <li><span class="about-list-marker">—</span> Sweet afternoons and beautiful desserts</li>
-            <li><span class="about-list-marker">—</span> Conversations that last</li>
-            <li><span class="about-list-marker">—</span> Moments that deserve to be savoured</li>
-          </ul>
-          <a href="#locations" class="btn btn-light reveal-up" id="btn-about-find">Find a Location</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALLERY — Editorial Filmstrip -->
-    <section class="gallery" id="gallery" aria-label="Photo gallery">
-      <div class="gallery-header reveal-up">
-        <p class="section-label">THE ATMOSPHERE</p>
-        <h2 class="gallery-headline">A moment, every morning.</h2>
-      </div>
-
-      <!-- Scrolling Filmstrip -->
-      <div class="filmstrip-outer" aria-label="Scrolling photo gallery" role="img">
-        <div class="filmstrip-track" id="filmstrip-track">
-          <!-- Set 1 -->
-          <div class="film-card film-tall">
-            <img src="product_croissant.jpg" alt="Golden croissants on parchment paper" loading="lazy" />
-            <div class="film-label">Croissants</div>
-          </div>
-          <div class="film-card film-wide">
-            <img src="product_breakfast.jpg" alt="Elegant French café breakfast" loading="lazy" />
-            <div class="film-label">Breakfast</div>
-          </div>
-          <div class="film-card film-sq">
-            <img src="product_coffee.jpg" alt="Latte art cappuccino" loading="lazy" />
-            <div class="film-label">Coffee</div>
-          </div>
-          <div class="film-card film-tall">
-            <img src="intro_editorial.jpg" alt="Baker dusting sugar on croissant" loading="lazy" />
-            <div class="film-label">Artisan</div>
-          </div>
-          <div class="film-card film-wide">
-            <img src="product_desserts.jpg" alt="French pastries and desserts" loading="lazy" />
-            <div class="film-label">Desserts</div>
-          </div>
-          <div class="film-card film-sq">
-            <img src="hero_cafe.jpg" alt="Warm café interior" loading="lazy" />
-            <div class="film-label">The Café</div>
-          </div>
-          <!-- Set 2 (duplicate for seamless loop) -->
-          <div class="film-card film-tall" aria-hidden="true">
-            <img src="product_croissant.jpg" alt="" loading="lazy" />
-            <div class="film-label">Croissants</div>
-          </div>
-          <div class="film-card film-wide" aria-hidden="true">
-            <img src="product_breakfast.jpg" alt="" loading="lazy" />
-            <div class="film-label">Breakfast</div>
-          </div>
-          <div class="film-card film-sq" aria-hidden="true">
-            <img src="product_coffee.jpg" alt="" loading="lazy" />
-            <div class="film-label">Coffee</div>
-          </div>
-          <div class="film-card film-tall" aria-hidden="true">
-            <img src="intro_editorial.jpg" alt="" loading="lazy" />
-            <div class="film-label">Artisan</div>
-          </div>
-          <div class="film-card film-wide" aria-hidden="true">
-            <img src="product_desserts.jpg" alt="" loading="lazy" />
-            <div class="film-label">Desserts</div>
-          </div>
-          <div class="film-card film-sq" aria-hidden="true">
-            <img src="hero_cafe.jpg" alt="" loading="lazy" />
-            <div class="film-label">The Café</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Stats bar below filmstrip -->
-      <div class="gallery-stats reveal-up">
-        <div class="gallery-stat">
-          <p class="stat-number">Daily</p>
-          <p class="stat-label">Fresh baked</p>
-        </div>
-        <div class="gallery-stat-divider" aria-hidden="true">·</div>
-        <div class="gallery-stat">
-          <p class="stat-number">100%</p>
-          <p class="stat-label">Butter croissants</p>
-        </div>
-        <div class="gallery-stat-divider" aria-hidden="true">·</div>
-        <div class="gallery-stat">
-          <p class="stat-number">Tashkent</p>
-          <p class="stat-label">Our home</p>
-        </div>
-        <div class="gallery-stat-divider" aria-hidden="true">·</div>
-        <div class="gallery-stat">
-          <p class="stat-number">À la française</p>
-          <p class="stat-label">Always</p>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- LOCATIONS -->
-    <section class="locations" id="locations" aria-label="Locations">
-      <div class="locations-inner">
-        <div class="locations-header reveal-up">
-          <p class="section-label">WHERE TO FIND US</p>
-          <h2 class="locations-headline">Find your BON!</h2>
         </div>
 
-        <div class="locations-grid">
-          <!--
-            LOCATION DATA PLACEHOLDERS
-            Replace the following details with official BON! location data.
-          -->
-          <article class="location-card reveal-up" style="--delay:0s" aria-label="Location 1">
-            <div class="location-card-header">
-              <div class="location-marker" aria-hidden="true"><span class="marker-dot"></span></div>
-              <p class="location-number">01</p>
+        <div class="tray-interactive-workbench">
+          
+          <!-- Step Selectors -->
+          <div class="tray-selectors-pane">
+            
+            <!-- Step 1: Viennoiserie / Savoury -->
+            <div class="tray-step-group">
+              <div class="step-label">
+                <span class="step-num">Step 1</span>
+                <strong>Choose your Pastry or Breakfast</strong>
+              </div>
+              <div class="step-options-grid" id="tray-opt-pastry">
+                <button class="tray-option active" data-type="pastry" data-name="Croissant au Beurre" data-price="22000" data-cal="280 kcal">
+                  <span class="opt-name">Croissant au Beurre</span>
+                  <span class="opt-sub">Classic All-Butter</span>
+                  <span class="opt-price">22 000 UZS</span>
+                </button>
+                <button class="tray-option" data-type="pastry" data-name="Pain au Chocolat" data-price="26000" data-cal="320 kcal">
+                  <span class="opt-name">Pain au Chocolat</span>
+                  <span class="opt-sub">Double Cacao Batons</span>
+                  <span class="opt-price">26 000 UZS</span>
+                </button>
+                <button class="tray-option" data-type="pastry" data-name="Galette de Sarrasin" data-price="58000" data-cal="410 kcal">
+                  <span class="opt-name">Galette de Sarrasin</span>
+                  <span class="opt-sub">Buckwheat & Greens</span>
+                  <span class="opt-price">58 000 UZS</span>
+                </button>
+                <button class="tray-option" data-type="pastry" data-name="Croissant aux Amandes" data-price="32000" data-cal="380 kcal">
+                  <span class="opt-name">Croissant Amandes</span>
+                  <span class="opt-sub">Almond Frangipane</span>
+                  <span class="opt-price">32 000 UZS</span>
+                </button>
+              </div>
             </div>
-            <h3 class="location-name">BON! — [Location Name]</h3>
-            <address class="location-address">
-              [Street Address], [District]<br />Tashkent, Uzbekistan
-            </address>
-            <div class="location-hours">
-              <p class="hours-label">Opening Hours</p>
-              <p class="hours-time">Mon–Fri: [00:00] – [00:00]</p>
-              <p class="hours-time">Sat–Sun: [00:00] – [00:00]</p>
-            </div>
-            <a href="#" class="location-directions" id="directions-1">Get Directions <span class="directions-arrow">↗</span></a>
-          </article>
 
-          <article class="location-card reveal-up" style="--delay:0.15s" aria-label="Location 2">
-            <div class="location-card-header">
-              <div class="location-marker" aria-hidden="true"><span class="marker-dot"></span></div>
-              <p class="location-number">02</p>
+            <!-- Step 2: Beverage -->
+            <div class="tray-step-group">
+              <div class="step-label">
+                <span class="step-num">Step 2</span>
+                <strong>Choose your Coffee or Infusion</strong>
+              </div>
+              <div class="step-options-grid" id="tray-opt-drink">
+                <button class="tray-option active" data-type="drink" data-name="Cappuccino Signature" data-price="28000" data-cal="140 kcal">
+                  <span class="opt-name">Cappuccino Signature</span>
+                  <span class="opt-sub">Velvet Microfoam</span>
+                  <span class="opt-price">28 000 UZS</span>
+                </button>
+                <button class="tray-option" data-type="drink" data-name="Espresso Double" data-price="20000" data-cal="5 kcal">
+                  <span class="opt-name">Espresso Double</span>
+                  <span class="opt-sub">Single Origin Arabica</span>
+                  <span class="opt-price">20 000 UZS</span>
+                </button>
+                <button class="tray-option" data-type="drink" data-name="Matcha Pistachio Crumble" data-price="44000" data-cal="210 kcal">
+                  <span class="opt-name">Matcha Crumble</span>
+                  <span class="opt-sub">Ceremonial Grade</span>
+                  <span class="opt-price">44 000 UZS</span>
+                </button>
+                <button class="tray-option" data-type="drink" data-name="Cold Brew Tonic" data-price="34000" data-cal="45 kcal">
+                  <span class="opt-name">Cold Brew Tonic</span>
+                  <span class="opt-sub">Layered Citrus Ice</span>
+                  <span class="opt-price">34 000 UZS</span>
+                </button>
+              </div>
             </div>
-            <h3 class="location-name">BON! — [Location Name]</h3>
-            <address class="location-address">
-              [Street Address], [District]<br />Tashkent, Uzbekistan
-            </address>
-            <div class="location-hours">
-              <p class="hours-label">Opening Hours</p>
-              <p class="hours-time">Mon–Fri: [00:00] – [00:00]</p>
-              <p class="hours-time">Sat–Sun: [00:00] – [00:00]</p>
-            </div>
-            <a href="#" class="location-directions" id="directions-2">Get Directions <span class="directions-arrow">↗</span></a>
-          </article>
 
-          <article class="location-card reveal-up" style="--delay:0.3s" aria-label="Location 3">
-            <div class="location-card-header">
-              <div class="location-marker" aria-hidden="true"><span class="marker-dot"></span></div>
-              <p class="location-number">03</p>
+            <!-- Step 3: Sweet Ending -->
+            <div class="tray-step-group">
+              <div class="step-label">
+                <span class="step-num">Step 3</span>
+                <strong>Choose your Pâtisserie Finale</strong>
+              </div>
+              <div class="step-options-grid" id="tray-opt-sweet">
+                <button class="tray-option active" data-type="sweet" data-name="Mille-Feuille Vanille" data-price="38000" data-cal="310 kcal">
+                  <span class="opt-name">Mille-Feuille</span>
+                  <span class="opt-sub">Madagascar Vanilla</span>
+                  <span class="opt-price">38 000 UZS</span>
+                </button>
+                <button class="tray-option" data-type="sweet" data-name="Éclair Chocolat Noir" data-price="32000" data-cal="240 kcal">
+                  <span class="opt-name">Éclair Chocolat</span>
+                  <span class="opt-sub">Guanaja Glaze</span>
+                  <span class="opt-price">32 000 UZS</span>
+                </button>
+                <button class="tray-option" data-type="sweet" data-name="Tartelette Framboise" data-price="42000" data-cal="260 kcal">
+                  <span class="opt-name">Tarte Framboise</span>
+                  <span class="opt-sub">Crème Pâtissière</span>
+                  <span class="opt-price">42 000 UZS</span>
+                </button>
+                <button class="tray-option" data-type="sweet" data-name="Duo de Macarons" data-price="24000" data-cal="160 kcal">
+                  <span class="opt-name">Duo Macarons</span>
+                  <span class="opt-sub">Pistache &amp; Caramel</span>
+                  <span class="opt-price">24 000 UZS</span>
+                </button>
+              </div>
             </div>
-            <h3 class="location-name">BON! — [Location Name]</h3>
-            <address class="location-address">
-              [Street Address], [District]<br />Tashkent, Uzbekistan
-            </address>
-            <div class="location-hours">
-              <p class="hours-label">Opening Hours</p>
-              <p class="hours-time">Mon–Fri: [00:00] – [00:00]</p>
-              <p class="hours-time">Sat–Sun: [00:00] – [00:00]</p>
-            </div>
-            <a href="#" class="location-directions" id="directions-3">Get Directions <span class="directions-arrow">↗</span></a>
-          </article>
-        </div>
 
-        <div class="map-visual reveal-up" aria-label="Tashkent map visual">
-          <div class="map-svg-wrap">
-            <svg viewBox="0 0 600 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <line x1="0" y1="75" x2="600" y2="75" stroke="#c8a882" stroke-width="0.5" opacity="0.4"/>
-              <line x1="0" y1="150" x2="600" y2="150" stroke="#c8a882" stroke-width="0.5" opacity="0.4"/>
-              <line x1="0" y1="225" x2="600" y2="225" stroke="#c8a882" stroke-width="0.5" opacity="0.4"/>
-              <line x1="100" y1="0" x2="100" y2="300" stroke="#c8a882" stroke-width="0.5" opacity="0.4"/>
-              <line x1="200" y1="0" x2="200" y2="300" stroke="#c8a882" stroke-width="0.5" opacity="0.4"/>
-              <line x1="300" y1="0" x2="300" y2="300" stroke="#c8a882" stroke-width="0.5" opacity="0.4"/>
-              <line x1="400" y1="0" x2="400" y2="300" stroke="#c8a882" stroke-width="0.5" opacity="0.4"/>
-              <line x1="500" y1="0" x2="500" y2="300" stroke="#c8a882" stroke-width="0.5" opacity="0.4"/>
-              <line x1="0" y1="0" x2="200" y2="150" stroke="#c8a882" stroke-width="0.5" opacity="0.25"/>
-              <line x1="600" y1="0" x2="400" y2="150" stroke="#c8a882" stroke-width="0.5" opacity="0.25"/>
-              <circle class="map-marker" cx="180" cy="120" r="6" fill="#8b4513"/>
-              <circle cx="180" cy="120" r="14" fill="#8b4513" opacity="0.15"/>
-              <circle class="map-marker" cx="300" cy="160" r="6" fill="#8b4513"/>
-              <circle cx="300" cy="160" r="14" fill="#8b4513" opacity="0.15"/>
-              <circle class="map-marker" cx="420" cy="100" r="6" fill="#8b4513"/>
-              <circle cx="420" cy="100" r="14" fill="#8b4513" opacity="0.15"/>
-              <text x="200" y="116" fill="#f5f0e8" font-size="9" font-family="Inter, sans-serif" opacity="0.85">BON! 01</text>
-              <text x="316" y="156" fill="#f5f0e8" font-size="9" font-family="Inter, sans-serif" opacity="0.85">BON! 02</text>
-              <text x="436" y="96" fill="#f5f0e8" font-size="9" font-family="Inter, sans-serif" opacity="0.85">BON! 03</text>
-              <text x="10" y="290" fill="#c8a882" font-size="10" font-family="serif" opacity="0.6" letter-spacing="3">TASHKENT</text>
-            </svg>
           </div>
-          <p class="map-caption">Tashkent, Uzbekistan</p>
+
+          <!-- Tray Visual & Receipt Preview -->
+          <div class="tray-receipt-pane">
+            <div class="vintage-tray-card" id="vintage-tray-card">
+              
+              <div class="receipt-header">
+                <div class="receipt-brand">BON! CAFÉ</div>
+                <div class="receipt-sub">Boulangerie & Salon de Thé · Tachkent</div>
+                <div class="receipt-line">================================</div>
+                <div class="receipt-date" id="receipt-date">TICKET: #BON-8204 · 25.08.2026</div>
+              </div>
+
+              <div class="receipt-items-list" id="receipt-items-list">
+                <div class="receipt-row">
+                  <span class="r-item" id="r-pastry-name">Croissant au Beurre</span>
+                  <span class="r-price" id="r-pastry-price">22 000 UZS</span>
+                </div>
+                <div class="receipt-row">
+                  <span class="r-item" id="r-drink-name">Cappuccino Signature</span>
+                  <span class="r-price" id="r-drink-price">28 000 UZS</span>
+                </div>
+                <div class="receipt-row">
+                  <span class="r-item" id="r-sweet-name">Mille-Feuille Vanille</span>
+                  <span class="r-price" id="r-sweet-price">38 000 UZS</span>
+                </div>
+              </div>
+
+              <div class="receipt-line">--------------------------------</div>
+
+              <div class="receipt-total-row">
+                <span class="tot-label">TOTAL DU MOMENT</span>
+                <span class="tot-price" id="r-total-price">88 000 UZS</span>
+              </div>
+
+              <div class="receipt-stamp-box">
+                <div class="tray-stamp">
+                  <span>BON! TACHKENT</span>
+                  <small>AUTHENTIQUE ★</small>
+                </div>
+              </div>
+
+              <div class="receipt-footer">
+                <p>« Prenez le temps de savourer chaque miette. »</p>
+                <button class="btn-copy-receipt" id="btn-save-tray">
+                  <span>📸 Save Tray / Share on Telegram</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
         </div>
 
       </div>
     </section>
 
-    <!-- SOCIAL PROOF -->
-    <section class="reviews" id="reviews" aria-label="Customer reviews">
-      <div class="reviews-inner">
-        <div class="reviews-header reveal-up">
-          <div class="stars" aria-label="5 stars">★★★★★</div>
-          <h2 class="reviews-headline">
-            "Made for mornings, meetings<br />
-            and everything in between."
-          </h2>
+
+    <!-- =========================================================
+         06. SECTION V — NOS MAISONS À TACHKENT (LOCATION DIRECTORY)
+         ========================================================= -->
+    <section class="section-locations" id="locations" aria-label="Café Locations">
+      <div class="locations-container">
+        
+        <div class="locations-editorial-head">
+          <span class="loc-label">NOTRE RÉSEAU · OUR HOUSES</span>
+          <h2 class="loc-headline">Find Your Corner at Bon!</h2>
+          <p class="loc-subtext">
+            Choose your city to explore all verified Bon! locations in Uzbekistan and Kazakhstan.
+          </p>
         </div>
-        <div class="reviews-grid">
-          <blockquote class="review-item reveal-up" style="--delay:0s">
-            <p class="review-text">"The croissants here are something special. Every morning I stop by on my way to work — it's become part of my routine. The coffee is excellent too."</p>
-            <footer class="review-author">
-              <span class="review-name">— A.K.</span>
-              <span class="review-location">Tashkent</span>
-            </footer>
+
+        <!-- City Filter Selector -->
+        <div class="locations-filter-bar">
+          <span class="filter-label">Select City</span>
+          <div class="city-tabs" id="city-filter-tabs">
+            <button class="city-tab active" data-city="All">All Cities</button>
+            <button class="city-tab" data-city="Tashkent">Tashkent</button>
+            <button class="city-tab" data-city="Samarkand">Samarkand</button>
+            <button class="city-tab" data-city="Bukhara">Bukhara</button>
+            <button class="city-tab" data-city="Chirchiq">Chirchiq</button>
+            <button class="city-tab" data-city="Andijan">Andijan</button>
+            <button class="city-tab" data-city="Shymkent">Shymkent</button>
+          </div>
+        </div>
+
+        <div class="locations-interactive-layout">
+          
+          <!-- Left: Interactive Location List -->
+          <div class="locations-nav-list" id="locations-list" role="tablist">
+            <!-- Rendered dynamically by bon.js -->
+          </div>
+
+          <!-- Right: Detailed Location Inspector & Map Action -->
+          <div class="locations-detail-pane">
+            <div class="loc-detail-card" id="loc-detail-card">
+              
+              <div class="detail-photo-wrap">
+                <img src="intro_editorial.jpg" alt="Atmosphere inside Bon! café in Tashkent" class="detail-img" id="detail-img" />
+                <div class="detail-badge" id="detail-hours-badge">Hours: 08:00 – 23:00 Daily</div>
+              </div>
+
+              <div class="detail-content">
+                <h3 class="detail-title" id="detail-title">BON! Shota Rustaveli Flagship</h3>
+                <p class="detail-desc" id="detail-desc">
+                  Our historic flagship home. Enjoy the morning breeze under century-old plane trees, warm croissants straight from the early ovens, and the murmur of conversation.
+                </p>
+
+                <div class="detail-info-grid">
+                  <div class="d-info-item">
+                    <span class="d-label">Address</span>
+                    <strong class="d-val" id="detail-address">63 Shota Rustaveli Street, Tashkent</strong>
+                  </div>
+                  <div class="d-info-item">
+                    <span class="d-label">Contact / Book</span>
+                    <strong class="d-val" id="detail-phone">+998 71 253 00 00</strong>
+                  </div>
+                  <div class="d-info-item">
+                    <span class="d-label">Breakfast Served</span>
+                    <strong class="d-val">08:00 – 13:00 Every Day</strong>
+                  </div>
+                  <div class="d-info-item">
+                    <span class="d-label">Atmosphere</span>
+                    <strong class="d-val" id="detail-vibe">Classic Parisian Terrace &amp; Bakery</strong>
+                  </div>
+                </div>
+
+                <div class="detail-map-actions">
+                  <a href="https://2gis.uz/tashkent/search/Bon!" target="_blank" rel="noopener" class="btn-map-action btn-2gis" id="link-2gis">
+                    <span>Open in 2GIS Map</span> ↗
+                  </a>
+                  <a href="https://yandex.uz/maps/10335/tashkent/search/Bon!%20cafe/" target="_blank" rel="noopener" class="btn-map-action btn-yandex" id="link-yandex">
+                    <span>Yandex Maps</span> ↗
+                  </a>
+                  <button class="btn-copy-address" id="btn-copy-address">
+                    <span>📋 Copy Address</span>
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         07. BRAND PHILOSOPHY — RHYTHMIC EDITORIAL DIALOGUE
+         ========================================================= -->
+    <section class="section-philosophy" aria-label="Brand Story and Craft">
+      <div class="philosophy-container">
+        
+        <div class="philo-quote-block">
+          <span class="quote-mark">«</span>
+          <blockquote class="philo-big-quote">
+            We do not rush the butter. We do not rush the dough. And we will never rush your morning.
           </blockquote>
-          <blockquote class="review-item reveal-up" style="--delay:0.12s">
-            <p class="review-text">"BON! feels different from any café in the city. The atmosphere is calm, the pastries are incredible and the staff genuinely make you feel welcome."</p>
-            <footer class="review-author">
-              <span class="review-name">— M.Y.</span>
-              <span class="review-location">Tashkent</span>
-            </footer>
-          </blockquote>
-          <blockquote class="review-item reveal-up" style="--delay:0.24s">
-            <p class="review-text">"We hold all our team catch-ups here now. Good coffee, beautiful food and the kind of space that makes conversations flow. Couldn't recommend it more."</p>
-            <footer class="review-author">
-              <span class="review-name">— N.R.</span>
-              <span class="review-location">Tashkent</span>
-            </footer>
-          </blockquote>
+          <cite class="philo-author">— L'Équipe Bon! Tashkent</cite>
         </div>
-      </div>
-    </section>
 
-    <!-- FINAL CTA -->
-    <section class="final-cta" id="final-cta" aria-label="Final call to action">
-      <div class="final-cta-bg" id="final-cta-bg">
-        <img src="product_breakfast.jpg" alt="Beautiful café breakfast on a marble table in warm morning light" class="final-cta-img" loading="lazy" />
-        <div class="final-cta-overlay"></div>
-      </div>
-      <div class="final-cta-content reveal-up">
-        <p class="final-cta-eyebrow">TASHKENT · DAILY</p>
-        <h2 class="final-cta-headline">Your table<br /><em>is waiting.</em></h2>
-        <div class="final-cta-buttons">
-          <a href="#locations" class="btn btn-cream" id="btn-cta-find">Find a Café</a>
-          <a href="#menu" class="btn btn-outline-light" id="btn-cta-menu">Explore Menu</a>
+        <div class="philo-triptych-grid">
+          <div class="triptych-card">
+            <span class="t-index">01 / ART</span>
+            <h4>Le Beurre Pur</h4>
+            <p>Every croissant has 27 laminated layers of pure creamery butter. Crisp on the outside, honeycomb tender within.</p>
+          </div>
+          <div class="triptych-card">
+            <span class="t-index">02 / TERROIR</span>
+            <h4>L'Espresso Raffiné</h4>
+            <p>Directly sourced Arabica beans, roasted to bring out toasted hazelnuts, stone fruits, and balanced cacao tones.</p>
+          </div>
+          <div class="triptych-card">
+            <span class="t-index">03 / HOSPITALITÉ</span>
+            <h4>L'Art de Vivre</h4>
+            <p>Whether you stay for 10 minutes or 4 hours with a book, our tables belong to your thoughts and conversations.</p>
+          </div>
         </div>
+
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer" id="footer" role="contentinfo">
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <p class="footer-logo">BON!</p>
-          <p class="footer-tagline">French-inspired café &amp; bakery<br />in Tashkent.</p>
+
+  <!-- =========================================================
+       08. EDITORIAL FOOTER
+       ========================================================= -->
+  <footer class="editorial-footer" role="contentinfo">
+    <div class="footer-container">
+      
+      <div class="footer-top-grid">
+        
+        <div class="footer-col-brand">
+          <span class="footer-brand-title">Bon!</span>
+          <p class="footer-brand-tagline">
+            Boulangerie, Pâtisserie &amp; Salon de Café.<br />
+            Un petit coin de France à Tachkent depuis 2008.
+          </p>
+          <div class="footer-badge-stamp">
+            <span>TASHKENT · UZBEKISTAN</span>
+          </div>
         </div>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <ul role="list">
-            <li><a href="#menu" class="footer-link">Menu</a></li>
-            <li><a href="#about" class="footer-link">About</a></li>
-            <li><a href="#locations" class="footer-link">Locations</a></li>
-            <li><a href="#gallery" class="footer-link">Gallery</a></li>
-            <li><a href="#" class="footer-link">Contact</a></li>
+
+        <div class="footer-col-nav">
+          <span class="f-col-head">Navigation</span>
+          <ul class="f-links">
+            <li><a href="#journal">01. Le Journal du Matin</a></li>
+            <li><a href="#menu-salon">02. La Carte &amp; Menus</a></li>
+            <li><a href="#seasonal">03. Boissons de Saison</a></li>
+            <li><a href="#tray-builder">04. Composez Votre Plateau</a></li>
+            <li><a href="#locations">05. Nos Maisons à Tachkent</a></li>
           </ul>
-        </nav>
-        <div class="footer-social">
-          <p class="footer-social-label">Follow us</p>
-          <a href="#" class="footer-social-link" id="link-instagram" aria-label="BON! on Instagram">Instagram</a>
-          <a href="#" class="footer-social-link" id="link-telegram" aria-label="BON! on Telegram">Telegram</a>
         </div>
+
+        <div class="footer-col-hours">
+          <span class="f-col-head">Maison Principale</span>
+          <p class="f-text"><strong>Shota Rustaveli, 63</strong><br />Tashkent, Uzbekistan</p>
+          <p class="f-text">Lundi – Dimanche : 08:00 – 23:00</p>
+          <p class="f-phone">Réservations: +998 71 253 00 00</p>
+        </div>
+
+        <div class="footer-col-social">
+          <span class="f-col-head">Restez Connectés</span>
+          <p class="f-text">Follow our daily bake dispatches, new seasonal recipes, and café moments.</p>
+          <div class="f-social-links">
+            <a href="https://instagram.com/boncafe.uz" target="_blank" rel="noopener" class="f-social-btn">Instagram @boncafe.uz</a>
+            <a href="https://t.me/boncafeuz" target="_blank" rel="noopener" class="f-social-btn">Telegram Official</a>
+          </div>
+        </div>
+
       </div>
-      <div class="footer-bottom">
-        <p class="footer-copy">© 2026 BON! All rights reserved.</p>
-        <p class="footer-credits">French-inspired · Tashkent</p>
+
+      <div class="footer-bottom-row">
+        <p class="f-copy">© 2026 BON! Café &amp; Bakery Tashkent. All Rights Reserved.</p>
+        <p class="f-french-touch">Fait avec amour et beurre pur à Tachkent.</p>
       </div>
+
     </div>
   </footer>
 
+  <!-- Notification Toast for interactive actions -->
+  <div class="bon-toast" id="bon-toast" role="status" aria-live="polite"></div>
+
+  <!-- Script logic -->
   <script src="bon.js"></script>
 </body>
 </html>
