@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BON! — Boulangerie & Café Parisien à Tachkent</title>
-  <meta name="description" content="BON! is Tashkent's iconic French bakery and café since 2008. Handcrafted viennoiserie, galettes de sarrasin, artisan coffee, and seasonal pâtisserie across Uzbekistan." />
+  <meta name="description"
+    content="BON! is Tashkent's iconic French bakery and café since 2008. Handcrafted viennoiserie, galettes de sarrasin, artisan coffee, and seasonal pâtisserie across Uzbekistan." />
   <meta property="og:title" content="BON! — Boulangerie & Café Parisien à Tachkent" />
-  <meta property="og:description" content="Un petit coin de France à Tachkent. Pure butter croissants, slow mornings, and genuine French café culture." />
+  <meta property="og:description"
+    content="Un petit coin de France à Tachkent. Pure butter croissants, slow mornings, and genuine French café culture." />
   <meta property="og:image" content="bon_coffee_croissant.png" />
   <meta property="og:type" content="website" />
 
   <!-- Fonts: Fraunces (Editorial Display) + Plus Jakarta Sans (Modern Clean) + Cormorant Garamond (Literary) + Caveat (Handwritten Notes) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet" />
 
   <link rel="stylesheet" href="bon.css" />
 </head>
+
 <body class="bon-editorial-body">
 
   <!-- Top Announcement / Live Dispatch Ribbon -->
   <aside class="dispatch-ticker" id="dispatch-ticker" aria-label="Bakery Dispatch">
     <div class="ticker-content">
-      <div class="ticker-item"><span class="ticker-dot live-pulse"></span> <strong id="tashkent-time-display">Tashkent 08:30</strong> &nbsp;·&nbsp; <span id="bakery-status-banner">Le Fournil: Fresh Viennoiserie Batch Out of the Oven</span></div>
+      <div class="ticker-item"><span class="ticker-dot live-pulse"></span> <strong id="tashkent-time-display">Tashkent
+          08:30</strong> &nbsp;·&nbsp; <span id="bakery-status-banner">Le Fournil: Fresh Viennoiserie Batch Out of the
+          Oven</span></div>
       <div class="ticker-divider">/</div>
-      <div class="ticker-item">Flagship Café: <strong>Shota Rustaveli, 63</strong> & <strong>Fidokor / Chekhov, 40</strong></div>
+      <div class="ticker-item">Flagship Café: <strong>Shota Rustaveli, 63</strong> & <strong>Fidokor / Chekhov,
+          40</strong></div>
       <div class="ticker-divider">/</div>
       <div class="ticker-item">Artisanal 100% Pure Butter Pastries Baked Daily</div>
       <div class="ticker-divider">/</div>
@@ -35,7 +44,7 @@
   <!-- Editorial Masthead Navigation -->
   <header class="masthead" id="masthead" role="banner">
     <div class="masthead-inner">
-      
+
       <!-- Left: Brand seal & Time -->
       <div class="masthead-left">
         <a href="#hero" class="brand-signature" aria-label="BON! Home">
@@ -58,7 +67,8 @@
       <!-- Right: Utility actions -->
       <div class="masthead-right">
         <!-- Ambiance audio toggle -->
-        <button class="sound-toggle-btn" id="sound-toggle-btn" aria-label="Toggle Café Ambiance Tone" title="Listen to Bon! Café Tone">
+        <button class="sound-toggle-btn" id="sound-toggle-btn" aria-label="Toggle Café Ambiance Tone"
+          title="Listen to Bon! Café Tone">
           <span class="sound-icon" aria-hidden="true">
             <span class="sound-bar"></span>
             <span class="sound-bar"></span>
@@ -90,11 +100,16 @@
     </div>
     <div class="curtain-body">
       <ul class="curtain-links">
-        <li><a href="#journal" class="curtain-link"><span class="c-num">01</span> <em>Le Journal</em> — Morning Dispatch</a></li>
-        <li><a href="#menu-salon" class="curtain-link"><span class="c-num">02</span> <em>La Carte</em> — Interactive Menu</a></li>
-        <li><a href="#seasonal" class="curtain-link"><span class="c-num">03</span> <em>Saison</em> — Winter Bar Drinks</a></li>
-        <li><a href="#tray-builder" class="curtain-link"><span class="c-num">04</span> <em>Mon Plateau</em> — Compose Your Tray</a></li>
-        <li><a href="#locations" class="curtain-link"><span class="c-num">05</span> <em>Nos Maisons</em> — Tashkent Addresses</a></li>
+        <li><a href="#journal" class="curtain-link"><span class="c-num">01</span> <em>Le Journal</em> — Morning
+            Dispatch</a></li>
+        <li><a href="#menu-salon" class="curtain-link"><span class="c-num">02</span> <em>La Carte</em> — Interactive
+            Menu</a></li>
+        <li><a href="#seasonal" class="curtain-link"><span class="c-num">03</span> <em>Saison</em> — Winter Bar
+            Drinks</a></li>
+        <li><a href="#tray-builder" class="curtain-link"><span class="c-num">04</span> <em>Mon Plateau</em> — Compose
+            Your Tray</a></li>
+        <li><a href="#locations" class="curtain-link"><span class="c-num">05</span> <em>Nos Maisons</em> — Tashkent
+            Addresses</a></li>
       </ul>
       <div class="curtain-footer">
         <p class="curtain-hours">Open Daily: 08:00 — 23:00</p>
@@ -114,7 +129,7 @@
          ========================================================= -->
     <section class="hero-editorial" id="hero" aria-label="Bon! Flagship Editorial Cover">
       <div class="hero-editorial-container">
-        
+
         <!-- Top Editorial Banner line -->
         <div class="hero-top-meta">
           <div class="meta-tag">
@@ -136,7 +151,7 @@
 
         <!-- Asymmetrical Hero Grid -->
         <div class="hero-editorial-grid">
-          
+
           <!-- Column 1: Massive Brand Title + Provocative Editorial Manifesto -->
           <div class="hero-col-title">
             <div class="hero-eyebrow-script">Un petit coin de France à Tachkent</div>
@@ -148,7 +163,8 @@
 
             <div class="hero-manifesto-card">
               <p class="manifesto-text">
-                Not a fast food counter. Not a corporate chain. <strong>Bon!</strong> is the ritual of the Parisian morning brought to the tree-lined avenues of Tashkent.
+                Not a fast food counter. Not a corporate chain. <strong>Bon!</strong> is the ritual of the Parisian
+                morning brought to the tree-lined avenues of Tashkent.
               </p>
               <div class="manifesto-footnote">
                 <span class="flour-icon">🌾</span>
@@ -170,15 +186,12 @@
           <!-- Column 2: The Real Bon! Hero Visual Composition -->
           <div class="hero-col-visual">
             <div class="hero-image-stage">
-              
+
               <!-- Primary Real Image: Bon! branded cup & golden croissant on bistro table -->
               <div class="hero-main-photo-wrap">
-                <img 
-                  src="bon_coffee_croissant.png" 
-                  alt="Authentic Bon! branded porcelain cup with cappuccino latte art and hot golden croissant on wooden café bistro table with checkered tiles" 
-                  class="hero-main-photo" 
-                  fetchpriority="high"
-                />
+                <img src="bon_coffee_croissant.png"
+                  alt="Authentic Bon! branded porcelain cup with cappuccino latte art and hot golden croissant on wooden café bistro table with checkered tiles"
+                  class="hero-main-photo" fetchpriority="high" />
                 <div class="photo-caption-tag">
                   <span class="caption-dot"></span>
                   <span>Signature Cappuccino & Croissant au Beurre Pure</span>
@@ -236,59 +249,61 @@
          ========================================================= -->
     <section class="section-journal" id="journal" aria-label="The Morning Dispatch">
       <div class="journal-container">
-        
+
         <div class="journal-header">
           <div class="header-left">
             <span class="journal-label">VOLUME 16 · ÉDITION TACHKENT</span>
             <h2 class="journal-title">La Table du Midi &amp; du Matin</h2>
           </div>
           <p class="journal-lede">
-            From the crisp crack of a morning galette to chilled summer gazpacho on limestone travertine, here is how Tashkent gathers around Bon!.
+            From the crisp crack of a morning galette to chilled summer gazpacho on limestone travertine, here is how
+            Tashkent gathers around Bon!.
           </p>
         </div>
 
         <!-- Big Editorial Table Spread Layout -->
         <div class="table-spread-grid">
-          
+
           <!-- Left: Big authentic photo with interactive hot-spots -->
           <div class="spread-photo-column">
             <div class="spread-photo-frame" id="spread-interactive-frame">
-              <img 
-                src="bon_table_spread.png" 
-                alt="Table spread at Bon! with Galette de sarrasin, chilled gazpacho with almonds, fresh green salad on branded porcelain, and layered espresso tonic" 
-                class="spread-main-img" 
-                loading="lazy"
-              />
+              <img src="bon_table_spread.png"
+                alt="Table spread at Bon! with Galette de sarrasin, chilled gazpacho with almonds, fresh green salad on branded porcelain, and layered espresso tonic"
+                class="spread-main-img" loading="lazy" />
 
               <!-- Interactive Spotlight Pin 1: Galette -->
-              <button class="dish-pin pin-galette" data-dish="galette" aria-label="Spotlight: Galette de Sarrasin" style="top: 72%; left: 62%;">
+              <button class="dish-pin pin-galette" data-dish="galette" aria-label="Spotlight: Galette de Sarrasin"
+                style="top: 72%; left: 62%;">
                 <span class="pin-pulse"></span>
                 <span class="pin-inner">1</span>
                 <span class="pin-tooltip">Galette de Sarrasin Complète</span>
               </button>
 
               <!-- Interactive Spotlight Pin 2: Gazpacho -->
-              <button class="dish-pin pin-gazpacho" data-dish="gazpacho" aria-label="Spotlight: Soupe Froide Gazpacho" style="top: 48%; left: 68%;">
+              <button class="dish-pin pin-gazpacho" data-dish="gazpacho" aria-label="Spotlight: Soupe Froide Gazpacho"
+                style="top: 48%; left: 68%;">
                 <span class="pin-pulse"></span>
                 <span class="pin-inner">2</span>
                 <span class="pin-tooltip">Gazpacho Andalou aux Amandes</span>
               </button>
 
               <!-- Interactive Spotlight Pin 3: Salade Fraîche -->
-              <button class="dish-pin pin-salad" data-dish="salad" aria-label="Spotlight: Salade Bon!" style="top: 34%; left: 28%;">
+              <button class="dish-pin pin-salad" data-dish="salad" aria-label="Spotlight: Salade Bon!"
+                style="top: 34%; left: 28%;">
                 <span class="pin-pulse"></span>
                 <span class="pin-inner">3</span>
                 <span class="pin-tooltip">Salade Gourmande au Parmesan</span>
               </button>
 
               <!-- Interactive Spotlight Pin 4: Cold Brew Tonic -->
-              <button class="dish-pin pin-coffee" data-dish="coffee" aria-label="Spotlight: Espresso Tonic" style="top: 60%; left: 22%;">
+              <button class="dish-pin pin-coffee" data-dish="coffee" aria-label="Spotlight: Espresso Tonic"
+                style="top: 60%; left: 22%;">
                 <span class="pin-pulse"></span>
                 <span class="pin-inner">4</span>
                 <span class="pin-tooltip">Café Tonic & Cold Brew Layered</span>
               </button>
             </div>
-            
+
             <p class="photo-subnote">
               <span class="subnote-icon">✦</span> Tap any number on the table to inspect the dish and recipe notes.
             </p>
@@ -296,14 +311,16 @@
 
           <!-- Right: Editorial Narrative & Dish Inspector Slate -->
           <div class="spread-info-column">
-            
+
             <div class="dish-inspector-card" id="dish-inspector-card">
               <div class="inspector-badge" id="inspector-badge">DISH FOCUS · 01</div>
               <h3 class="inspector-title" id="inspector-title">Galette de Sarrasin Complète</h3>
-              <p class="inspector-french-name" id="inspector-french">Crêpe artisanale de blé noir · Jambon de dinde, emmental fondu, œuf miroir & roquette</p>
-              
+              <p class="inspector-french-name" id="inspector-french">Crêpe artisanale de blé noir · Jambon de dinde,
+                emmental fondu, œuf miroir & roquette</p>
+
               <p class="inspector-story" id="inspector-story">
-                Authentic Brittany-style buckwheat galette folded into a warm savoury parcel. Crispy golden edges, served with farm fresh greens and olive oil on genuine Bon! porcelain.
+                Authentic Brittany-style buckwheat galette folded into a warm savoury parcel. Crispy golden edges,
+                served with farm fresh greens and olive oil on genuine Bon! porcelain.
               </p>
 
               <div class="inspector-meta-row">
@@ -323,10 +340,12 @@
 
               <div class="inspector-pairing">
                 <span class="pairing-label">Recommandation du Sommelier Café:</span>
-                <p class="pairing-text" id="inspector-pairing">Pairs wonderfully with our double-shot Iced Espresso Tonic with citrus zest.</p>
+                <p class="pairing-text" id="inspector-pairing">Pairs wonderfully with our double-shot Iced Espresso
+                  Tonic with citrus zest.</p>
               </div>
 
-              <button class="btn-add-tray" id="btn-inspector-add" data-item="Galette de Sarrasin" data-price="58000" data-cat="plat">
+              <button class="btn-add-tray" id="btn-inspector-add" data-item="Galette de Sarrasin" data-price="58000"
+                data-cat="plat">
                 <span>+ Add to My Bon! Tray</span>
               </button>
             </div>
@@ -354,7 +373,8 @@
                 <li class="timeline-slot">
                   <span class="slot-time">15:30</span>
                   <div class="slot-content">
-                    <strong>L'Heure du Goûter:</strong> Mille-feuilles vanille Bourbon, éclairs au chocolat & cafés signature.
+                    <strong>L'Heure du Goûter:</strong> Mille-feuilles vanille Bourbon, éclairs au chocolat & cafés
+                    signature.
                   </div>
                 </li>
               </ul>
@@ -373,18 +393,20 @@
          ========================================================= -->
     <section class="section-menu-salon" id="menu-salon" aria-label="Interactive Café Menu">
       <div class="menu-salon-container">
-        
+
         <!-- Section Header -->
         <div class="menu-editorial-header">
           <div class="header-tagline">LA CARTE DU CAFÉ · TOUT EST FAIT MAISON</div>
           <h2 class="menu-main-heading">Crafted with patience.<br /><em>Served with grace.</em></h2>
           <p class="menu-lead-description">
-            Explore our curated culinary repertoire across morning viennoiseries, authentic buckwheat galettes, savory tartines, artisan espresso roasts, and French pastry craft.
+            Explore our curated culinary repertoire across morning viennoiseries, authentic buckwheat galettes, savory
+            tartines, artisan espresso roasts, and French pastry craft.
           </p>
 
           <!-- Interactive Category Tabs -->
           <div class="menu-tab-nav" role="tablist" aria-label="Menu Sections">
-            <button class="carte-tab active" data-category="viennoiserie" role="tab" aria-selected="true" id="tab-viennoiserie">
+            <button class="carte-tab active" data-category="viennoiserie" role="tab" aria-selected="true"
+              id="tab-viennoiserie">
               <span class="tab-french">Viennoiserie & Pains</span>
               <span class="tab-count">6 items</span>
             </button>
@@ -414,7 +436,8 @@
             <div class="cake-order-text">
               <span class="cake-label">COMMANDES SPÉCIALES &amp; GÂTEAUX</span>
               <h3>Celebrate with a Grand Bon! Pâtisserie</h3>
-              <p>Custom birthday cakes, whole Opera tortes, fruit tarts, and catering boxes prepared with 24 hours notice for your special occasions in Tashkent.</p>
+              <p>Custom birthday cakes, whole Opera tortes, fruit tarts, and catering boxes prepared with 24 hours
+                notice for your special occasions in Tashkent.</p>
             </div>
             <div class="cake-order-action">
               <a href="https://t.me/boncafeuz" target="_blank" rel="noopener" class="btn-gold-order">
@@ -435,26 +458,24 @@
     <section class="section-seasonal" id="seasonal" aria-label="Winter Seasonal Drink Collection">
       <div class="seasonal-silk-backdrop">
         <div class="seasonal-container">
-          
+
           <div class="seasonal-header">
             <div class="seasonal-badge">COLLECTION D'HIVER · ÉDITION LIMITÉE</div>
             <h2 class="seasonal-headline">L'Atelier des Boissons de Saison</h2>
             <p class="seasonal-subtext">
-              Served exclusively in textured relief crystal glasses on rich emerald silk. Warm spices, delicate matcha crumble, toasted coconut, and velvety caramel popcorn foam.
+              Served exclusively in textured relief crystal glasses on rich emerald silk. Warm spices, delicate matcha
+              crumble, toasted coconut, and velvety caramel popcorn foam.
             </p>
           </div>
 
           <div class="seasonal-presentation-grid">
-            
+
             <!-- Real photo: 4 drinks on emerald green silk -->
             <div class="seasonal-photo-side">
               <div class="seasonal-frame">
-                <img 
-                  src="bon_seasonal_drinks.png" 
-                  alt="Four bespoke seasonal drinks from Bon! served in crystal textured glasses on emerald green fabric with popcorn, toasted crumble, cinnamon, and coconut" 
-                  class="seasonal-img" 
-                  loading="lazy"
-                />
+                <img src="bon_seasonal_drinks.png"
+                  alt="Four bespoke seasonal drinks from Bon! served in crystal textured glasses on emerald green fabric with popcorn, toasted crumble, cinnamon, and coconut"
+                  class="seasonal-img" loading="lazy" />
                 <div class="seasonal-silk-label">
                   <span>Photo: Atelier Boissons Bon! Tashkent</span>
                 </div>
@@ -463,19 +484,21 @@
 
             <!-- Drink items breakdown list -->
             <div class="seasonal-list-side">
-              
+
               <div class="seasonal-item-card">
                 <div class="season-item-header">
                   <span class="season-number">01</span>
                   <div class="season-titles">
                     <h4>Pistachio Matcha Crumble</h4>
-                    <p class="season-ingredients">Ceremonial green matcha, oat milk, crushed pistachio shortbread rim</p>
+                    <p class="season-ingredients">Ceremonial green matcha, oat milk, crushed pistachio shortbread rim
+                    </p>
                   </div>
                   <span class="season-price">44 000 UZS</span>
                 </div>
                 <div class="season-actions">
                   <span class="season-badge-tag">Warm / Iced</span>
-                  <button class="btn-mini-add" data-item="Pistachio Matcha Crumble" data-price="44000" data-cat="boisson">+ Add to Tray</button>
+                  <button class="btn-mini-add" data-item="Pistachio Matcha Crumble" data-price="44000"
+                    data-cat="boisson">+ Add to Tray</button>
                 </div>
               </div>
 
@@ -484,13 +507,15 @@
                   <span class="season-number">02</span>
                   <div class="season-titles">
                     <h4>Caramel Popcorn Raff</h4>
-                    <p class="season-ingredients">Double espresso, light cream, salted caramel, crowned with crisp caramel popcorn</p>
+                    <p class="season-ingredients">Double espresso, light cream, salted caramel, crowned with crisp
+                      caramel popcorn</p>
                   </div>
                   <span class="season-price">42 000 UZS</span>
                 </div>
                 <div class="season-actions">
                   <span class="season-badge-tag">House Favorite</span>
-                  <button class="btn-mini-add" data-item="Caramel Popcorn Raff" data-price="42000" data-cat="boisson">+ Add to Tray</button>
+                  <button class="btn-mini-add" data-item="Caramel Popcorn Raff" data-price="42000" data-cat="boisson">+
+                    Add to Tray</button>
                 </div>
               </div>
 
@@ -499,13 +524,15 @@
                   <span class="season-number">03</span>
                   <div class="season-titles">
                     <h4>Chocolat Chaud &amp; Flocons de Coco</h4>
-                    <p class="season-ingredients">Rich melted dark chocolate, steamed whole milk, snow-dusted coconut flakes</p>
+                    <p class="season-ingredients">Rich melted dark chocolate, steamed whole milk, snow-dusted coconut
+                      flakes</p>
                   </div>
                   <span class="season-price">38 000 UZS</span>
                 </div>
                 <div class="season-actions">
                   <span class="season-badge-tag">Comfort Classic</span>
-                  <button class="btn-mini-add" data-item="Chocolat Chaud Coco" data-price="38000" data-cat="boisson">+ Add to Tray</button>
+                  <button class="btn-mini-add" data-item="Chocolat Chaud Coco" data-price="38000" data-cat="boisson">+
+                    Add to Tray</button>
                 </div>
               </div>
 
@@ -514,13 +541,15 @@
                   <span class="season-number">04</span>
                   <div class="season-titles">
                     <h4>Pain d'Épices Spiced Latte</h4>
-                    <p class="season-ingredients">Espresso, cinnamon, star anise, nutmeg, honey foam with ginger cookie crumbs</p>
+                    <p class="season-ingredients">Espresso, cinnamon, star anise, nutmeg, honey foam with ginger cookie
+                      crumbs</p>
                   </div>
                   <span class="season-price">40 000 UZS</span>
                 </div>
                 <div class="season-actions">
                   <span class="season-badge-tag">Winter Blend</span>
-                  <button class="btn-mini-add" data-item="Spiced Gingerbread Latte" data-price="40000" data-cat="boisson">+ Add to Tray</button>
+                  <button class="btn-mini-add" data-item="Spiced Gingerbread Latte" data-price="40000"
+                    data-cat="boisson">+ Add to Tray</button>
                 </div>
               </div>
 
@@ -538,20 +567,21 @@
          ========================================================= -->
     <section class="section-tray-builder" id="tray-builder" aria-label="Interactive Bon! Moment Tray Builder">
       <div class="tray-container">
-        
+
         <div class="tray-intro-header">
           <span class="tray-label">EXPÉRIENCE INTERACTIVE · MON PLATEAU DU JOUR</span>
           <h2 class="tray-headline">Compose Your Ideal Bon! Moment</h2>
           <p class="tray-subtext">
-            Build your personalized café tray: select your morning viennoiserie, your signature drink, and an afternoon treat. Get your artisanal digital order card to show our baristas.
+            Build your personalized café tray: select your morning viennoiserie, your signature drink, and an afternoon
+            treat. Get your artisanal digital order card to show our baristas.
           </p>
         </div>
 
         <div class="tray-interactive-workbench">
-          
+
           <!-- Step Selectors -->
           <div class="tray-selectors-pane">
-            
+
             <!-- Step 1: Viennoiserie / Savoury -->
             <div class="tray-step-group">
               <div class="step-label">
@@ -559,22 +589,26 @@
                 <strong>Choose your Pastry or Breakfast</strong>
               </div>
               <div class="step-options-grid" id="tray-opt-pastry">
-                <button class="tray-option active" data-type="pastry" data-name="Croissant au Beurre" data-price="22000" data-cal="280 kcal">
+                <button class="tray-option active" data-type="pastry" data-name="Croissant au Beurre" data-price="22000"
+                  data-cal="280 kcal">
                   <span class="opt-name">Croissant au Beurre</span>
                   <span class="opt-sub">Classic All-Butter</span>
                   <span class="opt-price">22 000 UZS</span>
                 </button>
-                <button class="tray-option" data-type="pastry" data-name="Pain au Chocolat" data-price="26000" data-cal="320 kcal">
+                <button class="tray-option" data-type="pastry" data-name="Pain au Chocolat" data-price="26000"
+                  data-cal="320 kcal">
                   <span class="opt-name">Pain au Chocolat</span>
                   <span class="opt-sub">Double Cacao Batons</span>
                   <span class="opt-price">26 000 UZS</span>
                 </button>
-                <button class="tray-option" data-type="pastry" data-name="Galette de Sarrasin" data-price="58000" data-cal="410 kcal">
+                <button class="tray-option" data-type="pastry" data-name="Galette de Sarrasin" data-price="58000"
+                  data-cal="410 kcal">
                   <span class="opt-name">Galette de Sarrasin</span>
                   <span class="opt-sub">Buckwheat & Greens</span>
                   <span class="opt-price">58 000 UZS</span>
                 </button>
-                <button class="tray-option" data-type="pastry" data-name="Croissant aux Amandes" data-price="32000" data-cal="380 kcal">
+                <button class="tray-option" data-type="pastry" data-name="Croissant aux Amandes" data-price="32000"
+                  data-cal="380 kcal">
                   <span class="opt-name">Croissant Amandes</span>
                   <span class="opt-sub">Almond Frangipane</span>
                   <span class="opt-price">32 000 UZS</span>
@@ -589,22 +623,26 @@
                 <strong>Choose your Coffee or Infusion</strong>
               </div>
               <div class="step-options-grid" id="tray-opt-drink">
-                <button class="tray-option active" data-type="drink" data-name="Cappuccino Signature" data-price="28000" data-cal="140 kcal">
+                <button class="tray-option active" data-type="drink" data-name="Cappuccino Signature" data-price="28000"
+                  data-cal="140 kcal">
                   <span class="opt-name">Cappuccino Signature</span>
                   <span class="opt-sub">Velvet Microfoam</span>
                   <span class="opt-price">28 000 UZS</span>
                 </button>
-                <button class="tray-option" data-type="drink" data-name="Espresso Double" data-price="20000" data-cal="5 kcal">
+                <button class="tray-option" data-type="drink" data-name="Espresso Double" data-price="20000"
+                  data-cal="5 kcal">
                   <span class="opt-name">Espresso Double</span>
                   <span class="opt-sub">Single Origin Arabica</span>
                   <span class="opt-price">20 000 UZS</span>
                 </button>
-                <button class="tray-option" data-type="drink" data-name="Matcha Pistachio Crumble" data-price="44000" data-cal="210 kcal">
+                <button class="tray-option" data-type="drink" data-name="Matcha Pistachio Crumble" data-price="44000"
+                  data-cal="210 kcal">
                   <span class="opt-name">Matcha Crumble</span>
                   <span class="opt-sub">Ceremonial Grade</span>
                   <span class="opt-price">44 000 UZS</span>
                 </button>
-                <button class="tray-option" data-type="drink" data-name="Cold Brew Tonic" data-price="34000" data-cal="45 kcal">
+                <button class="tray-option" data-type="drink" data-name="Cold Brew Tonic" data-price="34000"
+                  data-cal="45 kcal">
                   <span class="opt-name">Cold Brew Tonic</span>
                   <span class="opt-sub">Layered Citrus Ice</span>
                   <span class="opt-price">34 000 UZS</span>
@@ -619,22 +657,26 @@
                 <strong>Choose your Pâtisserie Finale</strong>
               </div>
               <div class="step-options-grid" id="tray-opt-sweet">
-                <button class="tray-option active" data-type="sweet" data-name="Mille-Feuille Vanille" data-price="38000" data-cal="310 kcal">
+                <button class="tray-option active" data-type="sweet" data-name="Mille-Feuille Vanille"
+                  data-price="38000" data-cal="310 kcal">
                   <span class="opt-name">Mille-Feuille</span>
                   <span class="opt-sub">Madagascar Vanilla</span>
                   <span class="opt-price">38 000 UZS</span>
                 </button>
-                <button class="tray-option" data-type="sweet" data-name="Éclair Chocolat Noir" data-price="32000" data-cal="240 kcal">
+                <button class="tray-option" data-type="sweet" data-name="Éclair Chocolat Noir" data-price="32000"
+                  data-cal="240 kcal">
                   <span class="opt-name">Éclair Chocolat</span>
                   <span class="opt-sub">Guanaja Glaze</span>
                   <span class="opt-price">32 000 UZS</span>
                 </button>
-                <button class="tray-option" data-type="sweet" data-name="Tartelette Framboise" data-price="42000" data-cal="260 kcal">
+                <button class="tray-option" data-type="sweet" data-name="Tartelette Framboise" data-price="42000"
+                  data-cal="260 kcal">
                   <span class="opt-name">Tarte Framboise</span>
                   <span class="opt-sub">Crème Pâtissière</span>
                   <span class="opt-price">42 000 UZS</span>
                 </button>
-                <button class="tray-option" data-type="sweet" data-name="Duo de Macarons" data-price="24000" data-cal="160 kcal">
+                <button class="tray-option" data-type="sweet" data-name="Duo de Macarons" data-price="24000"
+                  data-cal="160 kcal">
                   <span class="opt-name">Duo Macarons</span>
                   <span class="opt-sub">Pistache &amp; Caramel</span>
                   <span class="opt-price">24 000 UZS</span>
@@ -647,7 +689,7 @@
           <!-- Tray Visual & Receipt Preview -->
           <div class="tray-receipt-pane">
             <div class="vintage-tray-card" id="vintage-tray-card">
-              
+
               <div class="receipt-header">
                 <div class="receipt-brand">BON! CAFÉ</div>
                 <div class="receipt-sub">Boulangerie & Salon de Thé · Tachkent</div>
@@ -705,7 +747,7 @@
          ========================================================= -->
     <section class="section-locations" id="locations" aria-label="Café Locations">
       <div class="locations-container">
-        
+
         <div class="locations-editorial-head">
           <span class="loc-label">NOTRE RÉSEAU · OUR HOUSES</span>
           <h2 class="loc-headline">Find Your Corner at Bon!</h2>
@@ -729,7 +771,7 @@
         </div>
 
         <div class="locations-interactive-layout">
-          
+
           <!-- Left: Interactive Location List -->
           <div class="locations-nav-list" id="locations-list" role="tablist">
             <!-- Rendered dynamically by bon.js -->
@@ -738,16 +780,18 @@
           <!-- Right: Detailed Location Inspector & Map Action -->
           <div class="locations-detail-pane">
             <div class="loc-detail-card" id="loc-detail-card">
-              
+
               <div class="detail-photo-wrap">
-                <img src="intro_editorial.jpg" alt="Atmosphere inside Bon! café in Tashkent" class="detail-img" id="detail-img" />
+                <img src="intro_editorial.jpg" alt="Atmosphere inside Bon! café in Tashkent" class="detail-img"
+                  id="detail-img" />
                 <div class="detail-badge" id="detail-hours-badge">Hours: 08:00 – 23:00 Daily</div>
               </div>
 
               <div class="detail-content">
                 <h3 class="detail-title" id="detail-title">BON! Shota Rustaveli Flagship</h3>
                 <p class="detail-desc" id="detail-desc">
-                  Our historic flagship home. Enjoy the morning breeze under century-old plane trees, warm croissants straight from the early ovens, and the murmur of conversation.
+                  Our historic flagship home. Enjoy the morning breeze under century-old plane trees, warm croissants
+                  straight from the early ovens, and the murmur of conversation.
                 </p>
 
                 <div class="detail-info-grid">
@@ -770,10 +814,12 @@
                 </div>
 
                 <div class="detail-map-actions">
-                  <a href="https://2gis.uz/tashkent/search/Bon!" target="_blank" rel="noopener" class="btn-map-action btn-2gis" id="link-2gis">
+                  <a href="https://2gis.uz/tashkent/search/Bon!" target="_blank" rel="noopener"
+                    class="btn-map-action btn-2gis" id="link-2gis">
                     <span>Open in 2GIS Map</span> ↗
                   </a>
-                  <a href="https://yandex.uz/maps/10335/tashkent/search/Bon!%20cafe/" target="_blank" rel="noopener" class="btn-map-action btn-yandex" id="link-yandex">
+                  <a href="https://yandex.uz/maps/10335/tashkent/search/Bon!%20cafe/" target="_blank" rel="noopener"
+                    class="btn-map-action btn-yandex" id="link-yandex">
                     <span>Yandex Maps</span> ↗
                   </a>
                   <button class="btn-copy-address" id="btn-copy-address">
@@ -797,7 +843,7 @@
          ========================================================= -->
     <section class="section-philosophy" aria-label="Brand Story and Craft">
       <div class="philosophy-container">
-        
+
         <div class="philo-quote-block">
           <span class="quote-mark">«</span>
           <blockquote class="philo-big-quote">
@@ -810,17 +856,20 @@
           <div class="triptych-card">
             <span class="t-index">01 / ART</span>
             <h4>Le Beurre Pur</h4>
-            <p>Every croissant has 27 laminated layers of pure creamery butter. Crisp on the outside, honeycomb tender within.</p>
+            <p>Every croissant has 27 laminated layers of pure creamery butter. Crisp on the outside, honeycomb tender
+              within.</p>
           </div>
           <div class="triptych-card">
             <span class="t-index">02 / TERROIR</span>
             <h4>L'Espresso Raffiné</h4>
-            <p>Directly sourced Arabica beans, roasted to bring out toasted hazelnuts, stone fruits, and balanced cacao tones.</p>
+            <p>Directly sourced Arabica beans, roasted to bring out toasted hazelnuts, stone fruits, and balanced cacao
+              tones.</p>
           </div>
           <div class="triptych-card">
             <span class="t-index">03 / HOSPITALITÉ</span>
             <h4>L'Art de Vivre</h4>
-            <p>Whether you stay for 10 minutes or 4 hours with a book, our tables belong to your thoughts and conversations.</p>
+            <p>Whether you stay for 10 minutes or 4 hours with a book, our tables belong to your thoughts and
+              conversations.</p>
           </div>
         </div>
 
@@ -835,9 +884,9 @@
        ========================================================= -->
   <footer class="editorial-footer" role="contentinfo">
     <div class="footer-container">
-      
+
       <div class="footer-top-grid">
-        
+
         <div class="footer-col-brand">
           <span class="footer-brand-title">Bon!</span>
           <p class="footer-brand-tagline">
@@ -871,7 +920,8 @@
           <span class="f-col-head">Restez Connectés</span>
           <p class="f-text">Follow our daily bake dispatches, new seasonal recipes, and café moments.</p>
           <div class="f-social-links">
-            <a href="https://instagram.com/boncafe.uz" target="_blank" rel="noopener" class="f-social-btn">Instagram @boncafe.uz</a>
+            <a href="https://instagram.com/boncafe.uz" target="_blank" rel="noopener" class="f-social-btn">Instagram
+              @boncafe.uz</a>
             <a href="https://t.me/boncafeuz" target="_blank" rel="noopener" class="f-social-btn">Telegram Official</a>
           </div>
         </div>
@@ -892,4 +942,5 @@
   <!-- Script logic -->
   <script src="bon.js"></script>
 </body>
+
 </html>

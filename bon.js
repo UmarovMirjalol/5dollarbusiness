@@ -564,7 +564,7 @@ document.addEventListener('DOMContentLoaded', () => {
     saveTrayBtn.addEventListener('click', () => {
       const total = trayState.pastry.price + trayState.drink.price + trayState.sweet.price;
       const summary = `🥐 Mon Plateau BON! Tashkent:\n1. ${trayState.pastry.name} (${trayState.pastry.price.toLocaleString('ru-RU')} UZS)\n2. ${trayState.drink.name} (${trayState.drink.price.toLocaleString('ru-RU')} UZS)\n3. ${trayState.sweet.name} (${trayState.sweet.price.toLocaleString('ru-RU')} UZS)\nTotal: ${total.toLocaleString('ru-RU')} UZS\n\nShow this ticket at Bon! Shota Rustaveli, Fidokor, or Shevchenko!`;
-      
+
       if (navigator.clipboard) {
         navigator.clipboard.writeText(summary).then(() => {
           showToast('📋 Tray details copied! Ready to share or show barista.');
