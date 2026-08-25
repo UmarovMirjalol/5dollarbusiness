@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BON! — French-Inspired Café & Bakery in Tashkent</title>
+  <meta name="description" content="BON! is a French-inspired café, bakery and confectionery in Tashkent, Uzbekistan. Freshly baked pastries, artisan coffee, beautiful desserts and slow breakfast — every day." />
+  <meta property="og:title" content="BON! — French-Inspired Café & Bakery" />
+  <meta property="og:description" content="A little taste of France in Tashkent. Freshly baked croissants, artisan coffee and beautiful desserts." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="bon.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="BON! Home">BON!</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#locations" class="nav-link">Locations</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      </ul>
+      <a href="#locations" class="nav-cta" id="nav-find-cafe">Find a Café</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile fullscreen nav -->
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">✕</button>
+    <ul class="mobile-nav-links" role="list">
+      <li><a href="#menu" class="mobile-nav-link" data-delay="0">Menu</a></li>
+      <li><a href="#about" class="mobile-nav-link" data-delay="1">About</a></li>
+      <li><a href="#locations" class="mobile-nav-link" data-delay="2">Locations</a></li>
+      <li><a href="#gallery" class="mobile-nav-link" data-delay="3">Gallery</a></li>
+      <li><a href="#locations" class="mobile-nav-link mobile-nav-cta" data-delay="4">Find a Café →</a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+      <span>Instagram</span>
+      <span>Telegram</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-label="Hero">
+      <div class="hero-bg" id="hero-bg">
+        <img src="hero_cafe.jpg" alt="Golden croissants and a cappuccino on a marble café table in warm morning light" class="hero-img" id="hero-img" fetchpriority="high" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-eyebrow" id="hero-eyebrow">
+          <span class="eyebrow-dot"></span>
+          BAKED FRESH DAILY · TASHKENT
+        </p>
+        <h1 class="hero-headline" id="hero-headline">
+          <span class="hero-line" data-line="0">Bonjour,</span>
+          <span class="hero-line" data-line="1">Tashkent.</span>
+        </h1>
+        <p class="hero-subline" id="hero-subline">A little taste of France.</p>
+        <p class="hero-body" id="hero-body">
+          Freshly baked pastries, beautiful desserts and carefully crafted coffee —<br class="br-desktop" />
+          made for slow mornings and good conversations.
+        </p>
+        <div class="hero-buttons" id="hero-buttons">
+          <a href="#menu" class="btn btn-primary" id="btn-explore-menu">Explore the Menu</a>
+          <a href="#locations" class="btn btn-outline" id="btn-find-location">Find a Location</a>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro section-reveal" id="intro" aria-label="Brand introduction">
+      <div class="intro-inner">
+        <div class="intro-text-side reveal-left">
+          <p class="section-label">BON! PARISIAN SPIRIT</p>
+          <h2 class="intro-headline">
+            Made with care.<br />
+            <em>Enjoyed slowly.</em>
+          </h2>
+          <p class="intro-body">
+            Born from a love of French café culture, BON! brings the art of the boulangerie
+            to the heart of Tashkent. Every morning, our bakers craft croissants with the
+            patience they deserve — layers of butter folded and rested until they become
+            something close to perfect.
+          </p>
+          <p class="intro-body">
+            Our cafés are designed to slow you down. Pull up a chair, order something warm,
+            and let the day begin on your terms. Whether it's your first espresso of the morning
+            or an afternoon éclair, BON! is your place to just be.
+          </p>
+          <a href="#about" class="text-link reveal-link">Discover our story <span>→</span></a>
+        </div>
+        <div class="intro-image-side reveal-right">
+          <div class="intro-image-frame">
+            <img src="intro_editorial.jpg" alt="Baker dusting powdered sugar on a freshly baked croissant" class="intro-img" loading="lazy" />
+          </div>
+          <div class="intro-image-badge" aria-hidden="true">
+            <span class="badge-text">Est.</span>
+            <span class="badge-year">Tashkent</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products" id="products" aria-label="Signature products">
+      <div class="products-inner">
+        <div class="products-header reveal-up">
+          <p class="section-label">SIGNATURE</p>
+          <h2 class="products-headline">The good stuff.</h2>
+        </div>
+        <div class="products-grid">
+
+          <article class="product-item product-large reveal-clip" data-index="0" aria-label="Croissants">
+            <div class="product-img-wrap">
+              <img src="product_croissant.jpg" alt="Three golden flaky croissants on parchment paper" loading="lazy" />
+              <div class="product-overlay"></div>
+            </div>
+            <div class="product-info">
+              <p class="product-number">01</p>
+              <h3 class="product-name">Croissants</h3>
+              <p class="product-desc">Buttery, flaky and freshly baked.</p>
+            </div>
+          </article>
+
+          <article class="product-item product-tall reveal-clip" data-index="1" aria-label="Coffee">
+            <div class="product-img-wrap">
+              <img src="product_coffee.jpg" alt="Perfectly crafted latte art cappuccino on marble" loading="lazy" />
+              <div class="product-overlay"></div>
+            </div>
+            <div class="product-info">
+              <p class="product-number">02</p>
+              <h3 class="product-name">Coffee</h3>
+              <p class="product-desc">Carefully prepared espresso-based drinks.</p>
+            </div>
+          </article>
+
+          <article class="product-item product-wide reveal-clip" data-index="2" aria-label="Desserts">
+            <div class="product-img-wrap">
+              <img src="product_desserts.jpg" alt="Elegant French pastries and desserts on a white cake stand" loading="lazy" />
+              <div class="product-overlay"></div>
+            </div>
+            <div class="product-info">
+              <p class="product-number">03</p>
+              <h3 class="product-name">Desserts</h3>
+              <p class="product-desc">Beautiful cakes, pastries and sweet creations.</p>
+            </div>
+          </article>
+
+          <article class="product-item product-medium reveal-clip" data-index="3" aria-label="Breakfast">
+            <div class="product-img-wrap">
+              <img src="product_breakfast.jpg" alt="Elegant French café breakfast with avocado toast and coffee" loading="lazy" />
+              <div class="product-overlay"></div>
+            </div>
+            <div class="product-info">
+              <p class="product-number">04</p>
+              <h3 class="product-name">Breakfast</h3>
+              <p class="product-desc">A relaxed way to start the day.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU PREVIEW -->
+    <section class="menu" id="menu" aria-label="Menu preview">
+      <div class="menu-inner">
+        <div class="menu-header reveal-up">
+          <p class="section-label">THE MENU</p>
+          <h2 class="menu-headline">Something for every<br /><em>kind of morning.</em></h2>
+        </div>
+
+        <div class="menu-tabs" id="menu-tabs" role="tablist" aria-label="Menu categories">
+          <button class="menu-tab active" data-tab="coffee" role="tab" aria-selected="true" id="tab-coffee">Coffee</button>
+          <button class="menu-tab" data-tab="breakfast" role="tab" aria-selected="false" id="tab-breakfast">Breakfast</button>
+          <button class="menu-tab" data-tab="pastries" role="tab" aria-selected="false" id="tab-pastries">Pastries</button>
+          <button class="menu-tab" data-tab="desserts" role="tab" aria-selected="false" id="tab-desserts">Desserts</button>
+        </div>
+
+        <div class="menu-panels">
+
+          <div class="menu-panel active" data-panel="coffee" role="tabpanel" aria-labelledby="tab-coffee">
+            <div class="menu-items">
+              <div class="menu-item" data-stagger="0">
+                <div class="menu-item-left">
+                  <h4 class="menu-item-name">Espresso</h4>
+                  <p class="menu-item-desc">Single origin, expertly pulled</p>
+                </div>
+                <span class="menu-item-price">18 000 UZS</span>
+              </div>
+              <div class="menu-item" data-stagger="1">
+                <div class="menu-item-left">
+                  <h4 class="menu-item-name">Cappuccino</h4>
+                  <p class="menu-item-desc">Espresso, steamed milk, velvety foam</p>
+                </div>
+                <span class="menu-item-price">28 000 UZS</span>
+              </div>
+              <div class="menu-item" data-stagger="2">
+                <div class="menu-item-left">
+                  <h4 class="menu-item-name">Latte</h4>
+                  <p class="menu-item-desc">Smooth, creamy, perfectly balanced</p>
+                </div>
+                <span class="menu-item-price">30 000 UZS</span>
+              </div>
+              <div class="menu-item" data-stagger="3">
+                <div class="menu-item-left">
+                  <h4 class="menu-item-name">Flat White</h4>
+                  <p class="menu-item-desc">Ristretto and silky microfoam</p>
+                </div>
+                <span class="menu-item-price">32 000 UZS</span>
+              </div>
+              <div class="menu-item" data-stagger="4">
+                <div class="menu-item-left">
+                  <h4 class="menu-item-name">Americano</h4>
+                  <p class="menu-item-desc">Long black, clean and precise</p>
+                </div>
+                <span class="menu-item-price">22 000 UZS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-panel" data-panel="breakfast" role="tabpanel" aria-labelledby="tab-breakfast">
+            <div class="menu-items">
+              <div class="menu-item" data-stagger="0">
+                <div class="menu-item-left">
+                  <h4 class="menu-item-name">Breakfast Plate</h4>
+                  <p class="menu-item-desc">Eggs, sourdough toast, seasonal accompaniments</p>
+                </div>
+                <span class="menu-item-price">65 000 UZS</span>
+              </div>
+              <div class="menu-item" data-stagger="1">
+                <div class="menu-item-left">
+                  <h4 class="menu-item-name">Avocado Toast</h4>
+                  <p class="menu-item-desc">Sourdough, avocado, poached egg, microgreens</p>
+                </div>
+                <span class="menu-item-price">58 000 UZS</span>
+              </div>
+              <div class="menu-item" data-stagger="2">
+                <div class="menu-item-left">
+                  <h4 class="menu-item-name">Omelette du Matin</h4>
+                  <p class="menu-item-desc">Classic French omelette, herbs and cheese</p>
+                </div>
+                <span class="menu-item-price">52 000 UZS</span>
+              </div>
+              <div class="menu-item" data-stagger="3">
+                <div class="menu-item-left">
+                  <h4 class="menu-item-name">Granola & Yogurt</h4>
+                  <p class="menu-item-desc">House granola, fresh seasonal fruit</p>
+                </div>
+                <span class="menu-item-price">42 000 UZS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-panel" data-panel="pastries" role="tabpanel" aria-labelledby="tab-pastries">
+            <div class="menu-items">
+              <div class="menu-item" data-stagger="0">
+                <div class="menu-item-left">
+                  <h4 class="menu-item-name">Croissant</h4>
+                  <p class="menu-item-desc">Classic butter croissant, baked each morning</p>
+                </div>
+                <span class="menu-item-price">22 000 UZS</span>
+              </div>
+              <div class="menu-item" data-stagger="1">
+                <div class="menu-item-left">
+                  <h4 class="menu-item-name">Pain au Chocolat</h4>
+                  <p class="menu-item-desc">Dark chocolate wrapped in flaky pastry</p>
+                </div>
+                <span class="menu-item-price">26 000 UZS</span>
+              </div>
+              <div class="menu-item" data-stagger="2">
+                <div class="menu-item-left">
+                  <h4 class="menu-item-name">Almond Croissant</h4>
+                  <p class="menu-item-desc">Filled and topped with frangipane</p>
+                </div>
+                <span class="menu-item-price">30 000 UZS</span>
+              </div>
+              <div class="menu-item" data-stagger="3">
+                <div class="menu-item-left">
+                  <h4 class="menu-item-name">Kouign-Amann</h4>
+                  <p class="menu-item-desc">Caramelised butter cake, crispy and golden</p>
+                </div>
+                <span class="menu-item-price">28 000 UZS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-panel" data-panel="desserts" role="tabpanel" aria-labelledby="tab-desserts">
+            <div class="menu-items">
+              <div class="menu-item" data-stagger="0">
+                <div class="menu-item-left">
+                  <h4 class="menu-item-name">Cheesecake</h4>
+                  <p class="menu-item-desc">New York-style, seasonal fruit compote</p>
+                </div>
+                <span class="menu-item-price">48 000 UZS</span>
+              </div>
+              <div class="menu-item" data-stagger="1">
+                <div class="menu-item-left">
+                  <h4 class="menu-item-name">Fruit Tart</h4>
+                  <p class="menu-item-desc">Crisp pastry shell, crème pâtissière, seasonal fruit</p>
+                </div>
+                <span class="menu-item-price">45 000 UZS</span>
+              </div>
+              <div class="menu-item" data-stagger="2">
+                <div class="menu-item-left">
+                  <h4 class="menu-item-name">Éclair</h4>
+                  <p class="menu-item-desc">Choux pastry, chocolate glaze, crème filling</p>
+                </div>
+                <span class="menu-item-price">32 000 UZS</span>
+              </div>
+              <div class="menu-item" data-stagger="3">
+                <div class="menu-item-left">
+                  <h4 class="menu-item-name">Opera Cake</h4>
+                  <p class="menu-item-desc">Coffee buttercream, chocolate ganache, joconde</p>
+                </div>
+                <span class="menu-item-price">52 000 UZS</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="menu-note reveal-up">
+          <p>* Prices shown are indicative. Please confirm current pricing in-café.</p>
+        </div>
+        <div class="menu-cta reveal-up">
+          <a href="#" class="text-link-large" id="link-full-menu">View Full Menu →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARALLAX BREAK -->
+    <section class="parallax-break" id="visual-break" aria-label="Visual break">
+      <div class="parallax-img-wrap" id="parallax-wrap">
+        <img src="hero_cafe.jpg" alt="Fresh pastries and coffee on a café table" class="parallax-img" id="parallax-img" loading="lazy" />
+        <div class="parallax-overlay"></div>
+      </div>
+      <div class="parallax-text reveal-up">
+        <h2 class="parallax-headline">Take your time.</h2>
+        <div class="parallax-rule"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about" aria-label="About BON!">
+      <div class="about-inner">
+        <div class="about-image-side">
+          <div class="about-img-frame reveal-clip-dark">
+            <img src="intro_editorial.jpg" alt="Artisan baker at work in a beautiful French bakery" class="about-img" loading="lazy" />
+          </div>
+        </div>
+        <div class="about-text-side">
+          <p class="section-label section-label-light reveal-up">MORE THAN A BAKERY</p>
+          <h2 class="about-headline reveal-up">More than<br />a bakery.</h2>
+          <p class="about-body reveal-up">
+            BON! is a place that holds space for all kinds of mornings and all kinds of moments.
+            Come for your first coffee of the day. Stay for a slow breakfast. Return for an
+            afternoon dessert and a conversation that stretches past closing time.
+          </p>
+          <ul class="about-list reveal-up" aria-label="What BON! is for">
+            <li><span class="about-list-marker">—</span> Morning coffee &amp; slow breakfast</li>
+            <li><span class="about-list-marker">—</span> Meetings that need a proper setting</li>
+            <li><span class="about-list-marker">—</span> Sweet afternoons and beautiful desserts</li>
+            <li><span class="about-list-marker">—</span> Conversations that last</li>
+            <li><span class="about-list-marker">—</span> Moments that deserve to be savoured</li>
+          </ul>
+          <a href="#locations" class="btn btn-light reveal-up" id="btn-about-find">Find a Location</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY — Editorial Filmstrip -->
+    <section class="gallery" id="gallery" aria-label="Photo gallery">
+      <div class="gallery-header reveal-up">
+        <p class="section-label">THE ATMOSPHERE</p>
+        <h2 class="gallery-headline">A moment, every morning.</h2>
+      </div>
+
+      <!-- Scrolling Filmstrip -->
+      <div class="filmstrip-outer" aria-label="Scrolling photo gallery" role="img">
+        <div class="filmstrip-track" id="filmstrip-track">
+          <!-- Set 1 -->
+          <div class="film-card film-tall">
+            <img src="product_croissant.jpg" alt="Golden croissants on parchment paper" loading="lazy" />
+            <div class="film-label">Croissants</div>
+          </div>
+          <div class="film-card film-wide">
+            <img src="product_breakfast.jpg" alt="Elegant French café breakfast" loading="lazy" />
+            <div class="film-label">Breakfast</div>
+          </div>
+          <div class="film-card film-sq">
+            <img src="product_coffee.jpg" alt="Latte art cappuccino" loading="lazy" />
+            <div class="film-label">Coffee</div>
+          </div>
+          <div class="film-card film-tall">
+            <img src="intro_editorial.jpg" alt="Baker dusting sugar on croissant" loading="lazy" />
+            <div class="film-label">Artisan</div>
+          </div>
+          <div class="film-card film-wide">
+            <img src="product_desserts.jpg" alt="French pastries and desserts" loading="lazy" />
+            <div class="film-label">Desserts</div>
+          </div>
+          <div class="film-card film-sq">
+            <img src="hero_cafe.jpg" alt="Warm café interior" loading="lazy" />
+            <div class="film-label">The Café</div>
+          </div>
+          <!-- Set 2 (duplicate for seamless loop) -->
+          <div class="film-card film-tall" aria-hidden="true">
+            <img src="product_croissant.jpg" alt="" loading="lazy" />
+            <div class="film-label">Croissants</div>
+          </div>
+          <div class="film-card film-wide" aria-hidden="true">
+            <img src="product_breakfast.jpg" alt="" loading="lazy" />
+            <div class="film-label">Breakfast</div>
+          </div>
+          <div class="film-card film-sq" aria-hidden="true">
+            <img src="product_coffee.jpg" alt="" loading="lazy" />
+            <div class="film-label">Coffee</div>
+          </div>
+          <div class="film-card film-tall" aria-hidden="true">
+            <img src="intro_editorial.jpg" alt="" loading="lazy" />
+            <div class="film-label">Artisan</div>
+          </div>
+          <div class="film-card film-wide" aria-hidden="true">
+            <img src="product_desserts.jpg" alt="" loading="lazy" />
+            <div class="film-label">Desserts</div>
+          </div>
+          <div class="film-card film-sq" aria-hidden="true">
+            <img src="hero_cafe.jpg" alt="" loading="lazy" />
+            <div class="film-label">The Café</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats bar below filmstrip -->
+      <div class="gallery-stats reveal-up">
+        <div class="gallery-stat">
+          <p class="stat-number">Daily</p>
+          <p class="stat-label">Fresh baked</p>
+        </div>
+        <div class="gallery-stat-divider" aria-hidden="true">·</div>
+        <div class="gallery-stat">
+          <p class="stat-number">100%</p>
+          <p class="stat-label">Butter croissants</p>
+        </div>
+        <div class="gallery-stat-divider" aria-hidden="true">·</div>
+        <div class="gallery-stat">
+          <p class="stat-number">Tashkent</p>
+          <p class="stat-label">Our home</p>
+        </div>
+        <div class="gallery-stat-divider" aria-hidden="true">·</div>
+        <div class="gallery-stat">
+          <p class="stat-number">À la française</p>
+          <p class="stat-label">Always</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- LOCATIONS -->
+    <section class="locations" id="locations" aria-label="Locations">
+      <div class="locations-inner">
+        <div class="locations-header reveal-up">
+          <p class="section-label">WHERE TO FIND US</p>
+          <h2 class="locations-headline">Find your BON!</h2>
+        </div>
+
+        <div class="locations-grid">
+          <!--
+            LOCATION DATA PLACEHOLDERS
+            Replace the following details with official BON! location data.
+          -->
+          <article class="location-card reveal-up" style="--delay:0s" aria-label="Location 1">
+            <div class="location-card-header">
+              <div class="location-marker" aria-hidden="true"><span class="marker-dot"></span></div>
+              <p class="location-number">01</p>
+            </div>
+            <h3 class="location-name">BON! — [Location Name]</h3>
+            <address class="location-address">
+              [Street Address], [District]<br />Tashkent, Uzbekistan
+            </address>
+            <div class="location-hours">
+              <p class="hours-label">Opening Hours</p>
+              <p class="hours-time">Mon–Fri: [00:00] – [00:00]</p>
+              <p class="hours-time">Sat–Sun: [00:00] – [00:00]</p>
+            </div>
+            <a href="#" class="location-directions" id="directions-1">Get Directions <span class="directions-arrow">↗</span></a>
+          </article>
+
+          <article class="location-card reveal-up" style="--delay:0.15s" aria-label="Location 2">
+            <div class="location-card-header">
+              <div class="location-marker" aria-hidden="true"><span class="marker-dot"></span></div>
+              <p class="location-number">02</p>
+            </div>
+            <h3 class="location-name">BON! — [Location Name]</h3>
+            <address class="location-address">
+              [Street Address], [District]<br />Tashkent, Uzbekistan
+            </address>
+            <div class="location-hours">
+              <p class="hours-label">Opening Hours</p>
+              <p class="hours-time">Mon–Fri: [00:00] – [00:00]</p>
+              <p class="hours-time">Sat–Sun: [00:00] – [00:00]</p>
+            </div>
+            <a href="#" class="location-directions" id="directions-2">Get Directions <span class="directions-arrow">↗</span></a>
+          </article>
+
+          <article class="location-card reveal-up" style="--delay:0.3s" aria-label="Location 3">
+            <div class="location-card-header">
+              <div class="location-marker" aria-hidden="true"><span class="marker-dot"></span></div>
+              <p class="location-number">03</p>
+            </div>
+            <h3 class="location-name">BON! — [Location Name]</h3>
+            <address class="location-address">
+              [Street Address], [District]<br />Tashkent, Uzbekistan
+            </address>
+            <div class="location-hours">
+              <p class="hours-label">Opening Hours</p>
+              <p class="hours-time">Mon–Fri: [00:00] – [00:00]</p>
+              <p class="hours-time">Sat–Sun: [00:00] – [00:00]</p>
+            </div>
+            <a href="#" class="location-directions" id="directions-3">Get Directions <span class="directions-arrow">↗</span></a>
+          </article>
+        </div>
+
+        <div class="map-visual reveal-up" aria-label="Tashkent map visual">
+          <div class="map-svg-wrap">
+            <svg viewBox="0 0 600 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <line x1="0" y1="75" x2="600" y2="75" stroke="#c8a882" stroke-width="0.5" opacity="0.4"/>
+              <line x1="0" y1="150" x2="600" y2="150" stroke="#c8a882" stroke-width="0.5" opacity="0.4"/>
+              <line x1="0" y1="225" x2="600" y2="225" stroke="#c8a882" stroke-width="0.5" opacity="0.4"/>
+              <line x1="100" y1="0" x2="100" y2="300" stroke="#c8a882" stroke-width="0.5" opacity="0.4"/>
+              <line x1="200" y1="0" x2="200" y2="300" stroke="#c8a882" stroke-width="0.5" opacity="0.4"/>
+              <line x1="300" y1="0" x2="300" y2="300" stroke="#c8a882" stroke-width="0.5" opacity="0.4"/>
+              <line x1="400" y1="0" x2="400" y2="300" stroke="#c8a882" stroke-width="0.5" opacity="0.4"/>
+              <line x1="500" y1="0" x2="500" y2="300" stroke="#c8a882" stroke-width="0.5" opacity="0.4"/>
+              <line x1="0" y1="0" x2="200" y2="150" stroke="#c8a882" stroke-width="0.5" opacity="0.25"/>
+              <line x1="600" y1="0" x2="400" y2="150" stroke="#c8a882" stroke-width="0.5" opacity="0.25"/>
+              <circle class="map-marker" cx="180" cy="120" r="6" fill="#8b4513"/>
+              <circle cx="180" cy="120" r="14" fill="#8b4513" opacity="0.15"/>
+              <circle class="map-marker" cx="300" cy="160" r="6" fill="#8b4513"/>
+              <circle cx="300" cy="160" r="14" fill="#8b4513" opacity="0.15"/>
+              <circle class="map-marker" cx="420" cy="100" r="6" fill="#8b4513"/>
+              <circle cx="420" cy="100" r="14" fill="#8b4513" opacity="0.15"/>
+              <text x="200" y="116" fill="#f5f0e8" font-size="9" font-family="Inter, sans-serif" opacity="0.85">BON! 01</text>
+              <text x="316" y="156" fill="#f5f0e8" font-size="9" font-family="Inter, sans-serif" opacity="0.85">BON! 02</text>
+              <text x="436" y="96" fill="#f5f0e8" font-size="9" font-family="Inter, sans-serif" opacity="0.85">BON! 03</text>
+              <text x="10" y="290" fill="#c8a882" font-size="10" font-family="serif" opacity="0.6" letter-spacing="3">TASHKENT</text>
+            </svg>
+          </div>
+          <p class="map-caption">Tashkent, Uzbekistan</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="reviews" id="reviews" aria-label="Customer reviews">
+      <div class="reviews-inner">
+        <div class="reviews-header reveal-up">
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <h2 class="reviews-headline">
+            "Made for mornings, meetings<br />
+            and everything in between."
+          </h2>
+        </div>
+        <div class="reviews-grid">
+          <blockquote class="review-item reveal-up" style="--delay:0s">
+            <p class="review-text">"The croissants here are something special. Every morning I stop by on my way to work — it's become part of my routine. The coffee is excellent too."</p>
+            <footer class="review-author">
+              <span class="review-name">— A.K.</span>
+              <span class="review-location">Tashkent</span>
+            </footer>
+          </blockquote>
+          <blockquote class="review-item reveal-up" style="--delay:0.12s">
+            <p class="review-text">"BON! feels different from any café in the city. The atmosphere is calm, the pastries are incredible and the staff genuinely make you feel welcome."</p>
+            <footer class="review-author">
+              <span class="review-name">— M.Y.</span>
+              <span class="review-location">Tashkent</span>
+            </footer>
+          </blockquote>
+          <blockquote class="review-item reveal-up" style="--delay:0.24s">
+            <p class="review-text">"We hold all our team catch-ups here now. Good coffee, beautiful food and the kind of space that makes conversations flow. Couldn't recommend it more."</p>
+            <footer class="review-author">
+              <span class="review-name">— N.R.</span>
+              <span class="review-location">Tashkent</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="final-cta" aria-label="Final call to action">
+      <div class="final-cta-bg" id="final-cta-bg">
+        <img src="product_breakfast.jpg" alt="Beautiful café breakfast on a marble table in warm morning light" class="final-cta-img" loading="lazy" />
+        <div class="final-cta-overlay"></div>
+      </div>
+      <div class="final-cta-content reveal-up">
+        <p class="final-cta-eyebrow">TASHKENT · DAILY</p>
+        <h2 class="final-cta-headline">Your table<br /><em>is waiting.</em></h2>
+        <div class="final-cta-buttons">
+          <a href="#locations" class="btn btn-cream" id="btn-cta-find">Find a Café</a>
+          <a href="#menu" class="btn btn-outline-light" id="btn-cta-menu">Explore Menu</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-logo">BON!</p>
+          <p class="footer-tagline">French-inspired café &amp; bakery<br />in Tashkent.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <ul role="list">
+            <li><a href="#menu" class="footer-link">Menu</a></li>
+            <li><a href="#about" class="footer-link">About</a></li>
+            <li><a href="#locations" class="footer-link">Locations</a></li>
+            <li><a href="#gallery" class="footer-link">Gallery</a></li>
+            <li><a href="#" class="footer-link">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-social">
+          <p class="footer-social-label">Follow us</p>
+          <a href="#" class="footer-social-link" id="link-instagram" aria-label="BON! on Instagram">Instagram</a>
+          <a href="#" class="footer-social-link" id="link-telegram" aria-label="BON! on Telegram">Telegram</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 BON! All rights reserved.</p>
+        <p class="footer-credits">French-inspired · Tashkent</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="bon.js"></script>
+</body>
+</html>
